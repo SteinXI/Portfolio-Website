@@ -73,11 +73,11 @@ a:focus-visible {
 
 .Intro {
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2vw;
+    padding: clamp(8px, 1vw, 16px);
     background-color: var(--white);
 }
 
@@ -86,8 +86,8 @@ a:focus-visible {
 
 .Intro-box {
     width: 100%;
-    max-width: none;\
-    padding: clamp(20px, 3vw, 60px);
+    max-width: none;
+    padding: clamp(16px, 2vw, 35px);
     
     background-color: var(--white);
     border: 3px solid var(--black);
@@ -99,88 +99,75 @@ a:focus-visible {
 
 .Intro-label {
     color: var(--red);
-    font-size: 20px;
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 
 /* == 06. NAME == */
 
 .Intro h1 {
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(2.7rem, 6vw, 5.5rem);
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.04em;
 
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 
-/* =========================================
-   07. FIVE AREAS OF INTEREST
-========================================= */
+/* == 07. FIVE AREAS OF INTEREST == */
 
 .Intro-interests {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 24px;
-
-    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .Intro-interests span {
-    display: inline-block;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 65px;
+    padding: 12px 10px;
     font-size: 0.9rem;
     font-weight: 600;
-
-    padding-bottom: 6px;
-    border-bottom: 3px solid transparent;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--black);
+    border: 1px solid;
+    border-radius: 0;
+    overflow-wrap: break-word;
 }
 
-.interest-red {
-    border-bottom-color: var(--red) !important;
-}
-
-.interest-navy {
-    border-bottom-color: var(--navy) !important;
-}
-
-.interest-cyan {
-    border-bottom-color: var(--cyan) !important;
-}
-
-.interest-green {
-    border-bottom-color: var(--green) !important;
-}
-
-.interest-gold {
-    border-bottom-color: var(--gold) !important;
-}
+.Intro-interests .interest-red { border-color: var(--red); }
+.Intro-interests .interest-navy { border-color: var(--navy); }
+.Intro-interests .interest-cyan { border-color: var(--cyan); }
+.Intro-interests .interest-green { border-color: var(--green); }
+.Intro-interests .interest-gold { border-color: var(--gold); }
 
 
-/* =========================================
-   08. INTRODUCTION DESCRIPTION
-========================================= */
+/* == 08. INTRODUCTION DESCRIPTION == */
 
 .Intro-description {
-    max-width: 780px;
-
-    font-size: 1.05rem;
-    line-height: 1.85;
-
+    width: 100%;
+    max-width: none;
+    font-size: clamp(1rem, 1.15vw, 1.1rem);
+    line-height: 1.7;
     color: var(--grey);
-
-    margin-bottom: 36px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    margin-bottom: 24px;
 }
 
 
-/* =========================================
-   09. BUTTONS
-========================================= */
+/* == 09. INTRODUCTION BUTTONS == */
 
 .Intro-buttons {
     display: flex;
@@ -224,7 +211,7 @@ a:focus-visible {
     background-color: transparent;
     color: var(--black);
 
-    border-color: var(--black) !important;
+    border-color: var(--black);
 }
 
 .Intro-button-secondary:hover {
@@ -233,70 +220,76 @@ a:focus-visible {
 }
 
 
-/* =========================================
-   10. RESPONSIVE DESIGN
-========================================= */
+/* == 10. RESPONSIVE DESIGN == */
+
+@media (max-width: 900px) {
+    .Intro-interests {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+    .Intro-interests span {
+        min-height: 60px;
+        font-size: 0.85rem;
+    }
+}
 
 @media (max-width: 768px) {
-
+    .Intro { padding: 10px; }
     .Intro-box {
-    padding: 32px 24px;
-    border-width: 1px;
+        padding: clamp(16px, 3vw, 24px);
+        border-width: 3px;
     }
-
-    .Intro-box {
-        padding: 32px 24px;
-        border-width: 1px;
+    .Intro-label {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
     }
-
     .Intro h1 {
-        font-size: clamp(2.5rem, 9vw, 4rem);
-        margin-bottom: 24px;
+        font-size: clamp(2.3rem, 9vw, 4rem);
+        margin-bottom: 20px;
     }
-
     .Intro-interests {
-        gap: 10px 16px;
-        margin-bottom: 26px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 20px;
     }
-
     .Intro-interests span {
+        min-height: 60px;
+        padding: 10px 8px;
         font-size: 0.8rem;
-        border-bottom-width: 2px;
+        line-height: 1.4;
     }
-
     .Intro-description {
+        width: 100%;
+        max-width: none;
         font-size: 1rem;
-        line-height: 1.75;
+        line-height: 1.7;
+        margin-bottom: 22px;
     }
-
+    .Intro-buttons { gap: 10px; }
     .Intro-buttons a {
-        padding: 12px 20px;
+        padding: 11px 18px;
         font-size: 0.9rem;
     }
 }
 
 @media (max-width: 380px) {
-
-    .Intro-box {
-        padding: 24px 18px;
+    .Intro { padding: 8px; }
+    .Intro-box { padding: 16px; }
+    .Intro-interests {
+        grid-template-columns: 1fr;
+        gap: 8px;
     }
-
+    .Intro-interests span { min-height: 48px; }
     .Intro-buttons {
         flex-direction: column;
+        align-items: stretch;
     }
-
-    .Intro-buttons a {
-        width: 100%;
-    }
+    .Intro-buttons a { width: 100%; }
 }
+
+/* == 11. ACCESSIBILITY == */
 
 @media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    .Intro-buttons a {
-        transition: none;
-    }
+    html { scroll-behavior: auto; }
+    .Intro-buttons a { transition: none; }
 }
-
