@@ -65,13 +65,13 @@ a:focus-visible, button:focus-visible {
 }
 .Intro-label {
     color: var(--red);
-    font-size: 1.1rem;
+    font-size: clamp(1.15rem, 1.5vw, 1.35rem);
     font-weight: 700;
     letter-spacing: 0.1em;
     margin-bottom: 0;
 }
 .Intro h1 {
-    font-size: clamp(2.7rem, 6vw, 5.5rem);
+    font-size: clamp(3rem, 5.5vw, 5.15rem);
     line-height: 1.1;
     letter-spacing: -0.04em;
     margin-bottom: 0;
@@ -90,7 +90,7 @@ a:focus-visible, button:focus-visible {
     width: auto;
     min-height: 0;
     padding: 0 0 6px;
-    font-size: 0.92rem;
+    font-size: clamp(1rem, 1.22vw, 1.13rem);
     font-weight: 600;
     line-height: 1.45;
     text-align: left;
@@ -108,7 +108,7 @@ a:focus-visible, button:focus-visible {
 .Intro-description {
     width: 100%;
     max-width: 920px;
-    font-size: clamp(1rem, 1.1vw, 1.1rem);
+    font-size: clamp(1.075rem, 1.35vw, 1.2rem);
     font-weight: 400;
     line-height: 1.65;
     color: var(--grey);
@@ -122,11 +122,11 @@ a:focus-visible, button:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 46px;
-    padding: 11px 25px;
+    min-height: 50px;
+    padding: 12px 27px;
     border: 1px solid transparent;
     border-radius: 4px;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 600;
 }
 .Intro-button-primary {
@@ -261,10 +261,10 @@ a:focus-visible, button:focus-visible {
         justify-content: center;
         gap: clamp(16px, 3vh, 30px);
     }
-    .Intro h1 { font-size: clamp(2.4rem, 9vw, 4rem); }
+    .Intro h1 { font-size: clamp(2.5rem, 8.5vw, 4rem); }
     .Intro-interests { gap: 10px 16px; }
-    .Intro-interests span { font-size: 0.82rem; border-bottom-width: 2px; }
-    .Intro-description { max-width: 100%; font-size: 1rem; line-height: 1.65; }
+    .Intro-interests span { font-size: 0.95rem; border-bottom-width: 2px; }
+    .Intro-description { max-width: 100%; font-size: 1.05rem; line-height: 1.65; }
     .page-content { padding: 12px; }
     .content-section { padding: 25px 20px; }
     .facts-grid { grid-template-columns: 1fr; }
