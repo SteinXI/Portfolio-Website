@@ -14,7 +14,11 @@
 
 /* == 02. BASIC WEBSITE SETTINGS == */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+    /* Gentle page-to-page scrolling without trapping longer sections */
+    scroll-snap-type: y proximity;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -37,12 +41,23 @@ a:focus-visible, button:focus-visible {
 
 /* == 03. INTRODUCTION FRAME == */
 .Intro {
+    --intro-edge: clamp(8px, 1vw, 16px);
     width: 100%;
-    padding: clamp(8px, 1vw, 16px);
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: var(--intro-edge);
+    display: flex;
+    align-items: stretch;
     background: var(--white);
+    scroll-snap-align: start;
 }
 .Intro-box {
     width: 100%;
+    min-height: calc(100vh - 2 * var(--intro-edge));
+    min-height: calc(100svh - 2 * var(--intro-edge));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: clamp(20px, 2.5vw, 40px);
     border: 2px solid var(--black);
     border-radius: 0;
@@ -132,6 +147,7 @@ a:focus-visible, button:focus-visible {
 
 /* == 07. REMAINING SECTIONS & LEFT NAVIGATION SPACE == */
 .page-content {
+    scroll-snap-align: start;
     background: var(--black);
     padding: 16px clamp(12px, 2vw, 32px) 30px var(--nav-space);
 }
@@ -239,7 +255,7 @@ a:focus-visible, button:focus-visible {
 /* == 09. RESPONSIVE DESIGN == */
 @media (max-width: 768px) {
     :root { --nav-space: 0px; }
-    .Intro { padding: 10px; }
+    .Intro { --intro-edge: 10px; }
     .Intro-box { padding: 22px 18px; }
     .Intro h1 { font-size: clamp(2.4rem, 9vw, 4rem); }
     .Intro-interests { gap: 10px 16px; }
@@ -301,6 +317,6 @@ a:focus-visible, button:focus-visible {
     .Intro-buttons a, .Intro-button-placeholder { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
+    html { scroll-behavior: auto; scroll-snap-type: none; }
     .floating-nav { transition: none; }
 }
