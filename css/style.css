@@ -66,7 +66,7 @@ a:focus-visible, button:focus-visible {
 }
 .Intro-label {
     color: var(--red);
-    font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+    font-size: clamp(1.25rem, 1.65vw, 1.5rem);
     font-weight: 700;
     letter-spacing: 0.1em;
     margin-bottom: 0;
@@ -126,8 +126,9 @@ a:focus-visible, button:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 50px;
-    padding: 12px 27px;
+    width: 172px;
+    min-height: 52px;
+    padding: 12px 20px;
     border: 1px solid transparent;
     border-radius: 4px;
     font-size: 1.05rem;
@@ -150,13 +151,20 @@ a:focus-visible, button:focus-visible {
     border-color: #004182;
 }
 .Intro-button-secondary {
-    background: transparent;
-    border-color: var(--black) !important;
-    color: var(--black);
+    gap: 10px;
+    background: var(--black);
+    border-color: var(--black);
+    color: var(--white);
 }
 .Intro-button-secondary:hover {
-    background: var(--black);
-    color: var(--white);
+    background: #333333;
+    border-color: #333333;
+}
+.contact-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
 }
 .Intro-button-placeholder { cursor: default; }
 
