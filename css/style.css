@@ -57,8 +57,8 @@ a:focus-visible, button:focus-visible {
     min-height: calc(100svh - 2 * var(--intro-edge));
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: clamp(22px, 3vw, 48px);
+    justify-content: space-evenly;
+    padding: clamp(28px, 4vw, 60px) clamp(24px, 6.5vw, 110px);
     border: 2px solid var(--black);
     border-radius: 0;
     background: var(--white);
@@ -68,13 +68,13 @@ a:focus-visible, button:focus-visible {
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 0.1em;
-    margin-bottom: clamp(16px, 2.5vh, 26px);
+    margin-bottom: 0;
 }
 .Intro h1 {
     font-size: clamp(2.7rem, 6vw, 5.5rem);
     line-height: 1.1;
     letter-spacing: -0.04em;
-    margin-bottom: clamp(24px, 3.5vh, 38px);
+    margin-bottom: 0;
 }
 
 /* == 04. FIVE INTERESTS: ORIGINAL COLOURED UNDERLINES == */
@@ -83,7 +83,7 @@ a:focus-visible, button:focus-visible {
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 12px 26px;
-    margin-bottom: clamp(24px, 3.5vh, 38px);
+    margin-bottom: 0;
 }
 .Intro-interests span {
     display: inline-block;
@@ -107,13 +107,13 @@ a:focus-visible, button:focus-visible {
 /* == 05. INTRODUCTION PARAGRAPH == */
 .Intro-description {
     width: 100%;
-    max-width: none;
+    max-width: 920px;
     font-size: clamp(1rem, 1.1vw, 1.1rem);
     font-weight: 400;
     line-height: 1.65;
     color: var(--grey);
     white-space: normal;
-    margin-bottom: clamp(24px, 3.5vh, 36px);
+    margin-bottom: 0;
 }
 
 /* == 06. INTRODUCTION BUTTONS == */
@@ -256,11 +256,15 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 768px) {
     :root { --nav-space: 0px; }
     .Intro { --intro-edge: 10px; }
-    .Intro-box { padding: 22px 18px; }
+    .Intro-box {
+        padding: 28px clamp(18px, 4vw, 32px);
+        justify-content: center;
+        gap: clamp(16px, 3vh, 30px);
+    }
     .Intro h1 { font-size: clamp(2.4rem, 9vw, 4rem); }
     .Intro-interests { gap: 10px 16px; }
     .Intro-interests span { font-size: 0.82rem; border-bottom-width: 2px; }
-    .Intro-description { font-size: 1rem; line-height: 1.65; }
+    .Intro-description { max-width: 100%; font-size: 1rem; line-height: 1.65; }
     .page-content { padding: 12px; }
     .content-section { padding: 25px 20px; }
     .facts-grid { grid-template-columns: 1fr; }
