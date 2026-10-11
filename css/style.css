@@ -4,6 +4,7 @@
     --black: #111111;
     --grey: #555555;
     --red: #C51F35;
+    --linkedin-blue: #0A66C2;
     --navy: #193F84;
     --cyan: #008FA8;
     --green: #00865F;
@@ -71,7 +72,7 @@ a:focus-visible, button:focus-visible {
     margin-bottom: 0;
 }
 .Intro h1 {
-    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
     font-size: clamp(4rem, 7.7vw, 7.1rem);
     font-weight: 600;
     line-height: 0.98;
@@ -133,9 +134,13 @@ a:focus-visible, button:focus-visible {
     font-weight: 600;
 }
 .Intro-button-primary {
-    background: var(--red);
-    border-color: var(--red);
+    background: var(--linkedin-blue);
+    border-color: var(--linkedin-blue);
     color: var(--white);
+}
+.Intro-button-primary:hover {
+    background: #004182;
+    border-color: #004182;
 }
 .Intro-button-secondary {
     background: transparent;
