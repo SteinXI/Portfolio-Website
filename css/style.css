@@ -1,21 +1,26 @@
 /* == 01. COLOUR SYSTEM == */
 
 :root {
+    /* Main background colours */
     --white: #FFFFFF;
-    --black: #101010;
-    --grey: #555555;
+    --black: #111111;
 
+    /* Five accent colours */
     --red: #C51F35;
     --navy: #193F84;
     --cyan: #008FA8;
     --green: #00865F;
     --gold: #C58B18;
+
+    /* Supporting text and borders */
+    --grey: #555555;
+    --light-border: #DDDDDD;
+    --dark-border: #404040;
+        
 }
 
 
-/* =========================================
-   02. BASIC WEBSITE SETTINGS
-========================================= */
+/* == 02. BASIC WEBSITE SETTINGS == */
 
 * {
     margin: 0;
@@ -59,43 +64,33 @@ a:focus-visible {
     top: 10px;
 }
 
-/* Navigation will be implemented later */
 .mobile-menu-button {
     display: none;
 }
 
 
-/* =========================================
-   03. MAIN / INTRODUCTION LAYOUT
-========================================= */
+/* == 03. MAIN / INTRODUCTION LAYOUT == */
 
 .Intro {
     width: 100%;
     min-height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    padding: 60px 7%;
-
+    padding: 2%;
     background-color: var(--white);
 }
 
 
-/* =========================================
-   04. BLACK-BORDERED BOX
-========================================= */
+/* == 04. BLACK-BORDERED BOX == */
 
 .Intro-box {
     width: 100%;
-    max-width: 1100px;
-
-    padding: 60px;
+    max-width: 97%;
+    padding: 3%;
 
     background-color: var(--white);
-
-    border: 2px solid var(--black);
+    border: 5px solid var(--black);
     border-radius: 0;
 }
 
