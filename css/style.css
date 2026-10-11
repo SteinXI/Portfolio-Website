@@ -71,9 +71,12 @@ a:focus-visible, button:focus-visible {
     margin-bottom: 0;
 }
 .Intro h1 {
-    font-size: clamp(3.6rem, 7vw, 6.5rem);
-    line-height: 1.1;
-    letter-spacing: -0.04em;
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-size: clamp(4rem, 7.7vw, 7.1rem);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    color: var(--black);
     margin-bottom: 0;
 }
 
@@ -261,7 +264,7 @@ a:focus-visible, button:focus-visible {
         justify-content: center;
         gap: clamp(16px, 3vh, 30px);
     }
-    .Intro h1 { font-size: clamp(2.85rem, 9.5vw, 4.8rem); }
+    .Intro h1 { font-size: clamp(3.1rem, 10vw, 5.1rem); }
     .Intro-interests { gap: 10px 16px; }
     .Intro-interests span { font-size: 0.95rem; border-bottom-width: 2px; }
     .Intro-description { max-width: 100%; font-size: 1.05rem; line-height: 1.65; }
