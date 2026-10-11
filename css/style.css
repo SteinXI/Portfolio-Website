@@ -74,7 +74,7 @@ a:focus-visible, button:focus-visible {
 .Intro h1 {
     font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
     font-size: clamp(4rem, 7.7vw, 7.1rem);
-    font-weight: 600;
+    font-weight: 400;
     line-height: 0.98;
     letter-spacing: -0.025em;
     color: var(--black);
@@ -134,9 +134,16 @@ a:focus-visible, button:focus-visible {
     font-weight: 600;
 }
 .Intro-button-primary {
+    gap: 10px;
     background: var(--linkedin-blue);
     border-color: var(--linkedin-blue);
     color: var(--white);
+}
+.linkedin-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
 }
 .Intro-button-primary:hover {
     background: #004182;
