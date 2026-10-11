@@ -1,131 +1,64 @@
-// ==========================================
-// FLOATING NAVIGATION INTERACTIONS
-// ==========================================
-
+// == FLOATING NAVIGATION: SHOW AFTER INTRODUCTION ==
 document.addEventListener("DOMContentLoaded", () => {
-
     const nav = document.querySelector(".floating-nav");
-    const navLinks = document.querySelectorAll(".floating-nav a");
     const menuButton = document.querySelector(".mobile-menu-button");
+    const intro = document.querySelector("#home");
+    const navLinks = [...document.querySelectorAll(".floating-nav a")];
+    const sections = [...document.querySelectorAll("main section[id]")];
 
-    if (!nav || !menuButton) return;
+    if (!nav || !menuButton || !intro) return;
 
-    // --------------------------------------
-    // 1. Mobile menu: open and close
-    // --------------------------------------
-
-    function setMenuOpen(isOpen) {
-        nav.classList.toggle("is-open", isOpen);
-        menuButton.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-        );
-
-        menuButton.setAttribute(
-            "aria-label",
-            isOpen ? "Close navigation menu" : "Open navigation menu"
-        );
-
-        menuButton.querySelector("span").textContent =
-            isOpen ? "✕" : "☰";
+    function setMenuOpen(open) {
+        nav.classList.toggle("is-open", open);
+        menuButton.setAttribute("aria-expanded", String(open));
+        menuButton.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+        const symbol = menuButton.querySelector("span");
+        if (symbol) symbol.textContent = open ? "✕" : "☰";
     }
 
-    menuButton.addEventListener("click", () => {
-        const isOpen = nav.classList.contains("is-open");
-        setMenuOpen(!isOpen);
-    });
+    function updateNavigation() {
+        const passedIntro = intro.getBoundingClientRect().bottom <= 0;
+        nav.classList.toggle("is-visible", passedIntro);
+        menuButton.classList.toggle("is-visible", passedIntro);
+        if (!passedIntro) setMenuOpen(false);
 
-    // --------------------------------------
-    // 2. Navigation link interactions
-    // --------------------------------------
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            setMenuOpen(false);
-        });
-    });
-
-    // Close mobile navigation using Escape
-    document.addEventListener("keydown", event => {
-        if (event.key === "Escape") {
-            setMenuOpen(false);
-        }
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener("click", event => {
-        if (
-            nav.classList.contains("is-open") &&
-            !nav.contains(event.target) &&
-            !menuButton.contains(event.target)
-        ) {
-            setMenuOpen(false);
-        }
-    });
-
-    // --------------------------------------
-    // 3. Detect current homepage section
-    // --------------------------------------
-
-    const sections = Array.from(
-        document.querySelectorAll("main section[id]")
-    );
-
-    function updateActiveSection() {
-
-        // Reference point: 42% down the viewport
+        let activeId = "home";
         const referenceY = window.innerHeight * 0.42;
-        let currentSection = "home";
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-
-            if (rect.top <= referenceY) {
-                currentSection = section.id;
-            }
-        });
-
-        // Facts & Figures belongs to the Home area
-        if (currentSection === "facts") {
-            currentSection = "home";
+        for (const section of sections) {
+            if (section.getBoundingClientRect().top <= referenceY) activeId = section.id;
         }
-
         navLinks.forEach(link => {
-            const isActive =
-                link.getAttribute("href") === "#" + currentSection;
-            link.classList.toggle("active", isActive);
-            if (isActive) {
-                link.setAttribute("aria-current", "location");
-            } else {
-                link.removeAttribute("aria-current");
-            }
+            const active = link.getAttribute("href") === "#" + activeId;
+            link.classList.toggle("active", active);
+            if (active) link.setAttribute("aria-current", "location");
+            else link.removeAttribute("aria-current");
         });
     }
 
-    // --------------------------------------
-    // 4. Update efficiently while scrolling
-    // --------------------------------------
-
-    let scrollScheduled = false;
-
-    function scheduleActiveUpdate() {
-        if (scrollScheduled) return;
-        scrollScheduled = true;
-        requestAnimationFrame(() => {
-            updateActiveSection();
-            scrollScheduled = false;
-        });
-    }
-
-    window.addEventListener("scroll", scheduleActiveUpdate, {
-        passive: true
+    menuButton.addEventListener("click", () => setMenuOpen(!nav.classList.contains("is-open")));
+    navLinks.forEach(link => link.addEventListener("click", () => setMenuOpen(false)));
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") setMenuOpen(false);
     });
-
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 768) {
+    document.addEventListener("click", event => {
+        if (nav.classList.contains("is-open") && !nav.contains(event.target) && !menuButton.contains(event.target)) {
             setMenuOpen(false);
         }
-        scheduleActiveUpdate();
     });
 
-    updateActiveSection();
+    let scheduled = false;
+    function scheduleUpdate() {
+        if (scheduled) return;
+        scheduled = true;
+        requestAnimationFrame(() => {
+            updateNavigation();
+            scheduled = false;
+        });
+    }
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) setMenuOpen(false);
+        scheduleUpdate();
+    });
+    updateNavigation();
 });
