@@ -2,67 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Academic and professional portfolio website of Hein Htet Naing.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academic and professional portfolio website of Hein Htet Naing.">
     <title>Hein Htet Naing | Personal Portfolio</title>
-
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
-
 <body>
-    <a href="#main-content" class="skip-link">
-        Skip to main content
-    </a>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- == FLOATING NAVIGATION PLACEHOLDER == -->
-<!-- Navigation will be developed separately -->
-<button
-    class="mobile-menu-button"
-    type="button"
-    aria-label="Open navigation menu"
-    aria-controls="floating-navigation"
-    aria-expanded="false"
-    hidden>
-    <span aria-hidden="true">☰</span>
-</button>
+    <!-- == FLOATING NAVIGATION: VISIBLE AFTER INTRO == -->
+    <button class="mobile-menu-button" type="button" aria-controls="floating-navigation"
+            aria-label="Open navigation menu" aria-expanded="false">
+        <span aria-hidden="true">☰</span>
+    </button>
+    <nav id="floating-navigation" class="floating-nav" aria-label="Page navigation">
+        <a href="#home" aria-label="Introduction"><span aria-hidden="true" class="nav-icon">⌂</span><span class="nav-tooltip">Introduction</span></a>
+        <a href="#facts" aria-label="Facts and Figures"><span aria-hidden="true" class="nav-icon">#</span><span class="nav-tooltip">Facts &amp; Figures</span></a>
+        <a href="#about" aria-label="About Me"><span aria-hidden="true" class="nav-icon">◯</span><span class="nav-tooltip">About Me</span></a>
+        <a href="#research" aria-label="Research"><span aria-hidden="true" class="nav-icon">▤</span><span class="nav-tooltip">Research</span></a>
+        <a href="#experience" aria-label="Experience"><span aria-hidden="true" class="nav-icon">▣</span><span class="nav-tooltip">Experience</span></a>
+        <a href="#education" aria-label="Education"><span aria-hidden="true" class="nav-icon">◇</span><span class="nav-tooltip">Education</span></a>
+        <a href="#projects" aria-label="Projects"><span aria-hidden="true" class="nav-icon">▱</span><span class="nav-tooltip">Projects</span></a>
+        <a href="#skills" aria-label="Skills and Languages"><span aria-hidden="true" class="nav-icon">✦</span><span class="nav-tooltip">Skills &amp; Languages</span></a>
+        <a href="#credentials" aria-label="Credentials"><span aria-hidden="true" class="nav-icon">☆</span><span class="nav-tooltip">Credentials</span></a>
+        <a href="#contact" aria-label="Contact"><span aria-hidden="true" class="nav-icon">✉</span><span class="nav-tooltip">Contact</span></a>
+    </nav>
 
-<!-- == 01. MAIN / INTRODUCTION == -->
-<main id="main-content">
-    <section id="home" class="section Intro">
-        <div class="Intro-box">
-            <p class="Intro-label">PORTFOLIO</p>
-            <h1>Hein Htet Naing</h1>
-            <div class="Intro-interests">
-                <span class="interest-red">Innovation Management</span>
-                <span class="interest-navy">Education &amp; Learning</span>
-                <span class="interest-cyan">Strategic Thinking</span>
-                <span class="interest-green">Digital Transformation</span>
-                <span class="interest-gold">Sustainable Development</span>
+    <main id="main-content">
+        <!-- == 01. INTRODUCTION == -->
+        <section id="home" class="section Intro">
+            <div class="Intro-box">
+                <p class="Intro-label">PORTFOLIO</p>
+                <h1>Hein Htet Naing</h1>
+                <div class="Intro-interests">
+                    <span class="interest-red">Innovation Management</span>
+                    <span class="interest-navy">Education &amp; Learning</span>
+                    <span class="interest-cyan">Strategic Thinking</span>
+                    <span class="interest-green">Digital Transformation</span>
+                    <span class="interest-gold">Sustainable Development</span>
+                </div>
+                <p class="Intro-description">
+                    Exploring how individuals and organisations learn, make decisions and adapt to change.
+                    Particular areas of interest include innovation management, education, strategic thinking
+                    and digital transformation, and how they influence organisational development and
+                    problem-solving. Together, these areas provide opportunities to understand how new ideas,
+                    knowledge and technology can support long-term improvement and sustainable development.
+                </p>
+                <div class="Intro-buttons">
+                    <!-- External destinations will be connected when the user supplies them. -->
+                    <span class="Intro-button-primary Intro-button-placeholder">LinkedIn</span>
+                    <a href="#contact" class="Intro-button-secondary">Contact</a>
+                </div>
             </div>
+        </section>
 
-            <!-- Introduction description -->
-            <p class="Intro-description">
-                Exploring how individuals and organisations learn, make decisions and adapt to change.
-                Particular areas of interest include innovation management, education, strategic thinking
-                and digital transformation, and how they influence organisational development and
-                problem-solving. Together, these areas provide opportunities to understand how new ideas,
-                knowledge and technology can support long-term improvement and sustainable development.
-            </p>
+        <!-- == REMAINING HOMEPAGE: RESERVED LEFT NAVIGATION MARGIN == -->
+        <div class="page-content">
+            <section id="facts" class="content-section facts">
+                <h2>Facts &amp; Figures</h2>
+                <div class="facts-grid">
+                    <div><strong>7+</strong><p>Years of Professional Experience</p></div>
+                    <div><strong>~700</strong><p>Students Counselled / Co-counselled</p></div>
+                </div>
+            </section>
 
-            <div class="Intro-buttons">
-                <a href="#research" class="Intro-button-primary">
-                    LinkedIn
-                </a>
-                <a href="#about" class="Intro-button-secondary">
-                    Contact
-                </a>
-            </div>
+            <section id="about" class="content-section">
+                <h2>About Me</h2>
+                <p>A brief overview of my background, experience and professional interests.</p>
+            </section>
+
+            <section id="research" class="content-section dark-section">
+                <h2>Research &amp; Inquiry</h2>
+                <p>Selected research work and academic interests.</p>
+            </section>
+
+            <section id="experience" class="content-section">
+                <h2>Professional Experience</h2>
+                <p>An overview of my professional experience and responsibilities.</p>
+            </section>
+
+            <section id="education" class="content-section">
+                <h2>Academic History</h2>
+                <p>Educational background and academic development.</p>
+            </section>
+
+            <section id="projects" class="content-section dark-section">
+                <h2>Projects &amp; Activities</h2>
+                <p>Selected professional and academic projects and activities.</p>
+            </section>
+
+            <section id="skills" class="content-section">
+                <h2>Skills &amp; Languages</h2>
+                <p>Professional capabilities, digital skills and languages.</p>
+            </section>
+
+            <section id="credentials" class="content-section">
+                <h2>Credentials &amp; Achievements</h2>
+                <p>Selected certifications, programmes and achievements.</p>
+            </section>
+
+            <section id="contact" class="content-section dark-section">
+                <h2>Contact</h2>
+                <p>For professional opportunities, academic collaboration or enquiries.</p>
+                <!-- Contact details will be added separately. -->
+            </section>
         </div>
-    </section>
-</main>
-
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2026 Hein Htet Naing</p>
+        <a href="#home">Back to Top</a>
+    </footer>
 </body>
 </html>
