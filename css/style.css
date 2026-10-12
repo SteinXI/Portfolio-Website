@@ -196,21 +196,6 @@ a:focus-visible, button:focus-visible {
     color: var(--white);
     border: 1px solid #404040;
 }
-.facts-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-    text-align: center;
-}
-.facts-grid strong {
-    display: block;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.2;
-    margin-bottom: 12px;
-}
-.facts-grid > div:first-child strong { color: var(--navy); }
-.facts-grid > div:last-child strong { color: var(--green); }
-
 /* == 08. FLOATING NAVIGATION == */
 .floating-nav {
     position: fixed;
@@ -289,7 +274,6 @@ a:focus-visible, button:focus-visible {
     .Intro-description { max-width: 100%; font-size: 1.05rem; line-height: 1.65; }
     .page-content { padding: 12px; }
     .content-section { padding: 25px 20px; }
-    .facts-grid { grid-template-columns: 1fr; }
     .mobile-menu-button {
         position: fixed;
         display: flex;
