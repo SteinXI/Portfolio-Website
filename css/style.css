@@ -442,7 +442,7 @@ a:focus-visible, button:focus-visible {
     margin-bottom: 7px;
 }
 .experience-meta h3 { font-size: 1.07rem; line-height: 1.4; font-weight: 700; }
-.experience-location { color: #777777; font-size: .95rem; }
+.experience-location { display: block; margin-top: 4px; color: #777777; font-size: .95rem; line-height: 1.45; }
 .experience-detail h4 { font-size: clamp(1.18rem, 1.55vw, 1.45rem); line-height: 1.4; margin-bottom: 11px; }
 .experience-note { font-size: .85em; font-weight: 400; color: var(--grey); }
 .experience-detail p { color: var(--grey); font-size: 1.02rem; line-height: 1.8; }
@@ -581,7 +581,7 @@ a:focus-visible, button:focus-visible {
 }
 .education-entry:last-child .education-marker::after { bottom: -34px; }
 .education-details {
-    padding-bottom: clamp(20px, 2.8vw, 36px);
+    padding-bottom: clamp(28px, 3.5vw, 46px);
     min-width: 0;
 }
 .education-entry:last-child .education-details { padding-bottom: 0; }
@@ -617,7 +617,7 @@ a:focus-visible, button:focus-visible {
     .education-marker::before { width: 17px; height: 17px; top: 7px; }
     .education-marker::after { top: 27px; }
     .education-details h3 { font-size: clamp(1.25rem, 5vw, 1.65rem); }
-    .education-details { padding-bottom: 24px; }
+    .education-details { padding-bottom: 30px; }
     .education-school, .education-note { font-size: 1rem; }
 }
 @media (max-width: 380px) {
@@ -856,10 +856,11 @@ a:focus-visible, button:focus-visible {
 .credential-item h3 {
     font-size: .9rem;
     line-height: 1.38;
-    font-weight: 400;
+    font-weight: 600;
     color: #161616;
 }
-.credential-item h3 strong { font-weight: 700; }
+.credentials-panel#credentials-panel-activities .credential-item h3 { font-weight: 400; }
+.credentials-panel#credentials-panel-activities .credential-item h3 strong { font-weight: 700; }
 .credential-year { margin-top: 4px; color: #666666 !important; font-size: .86rem; line-height: 1.35; }
 .credential-item > .credential-award-icon { color: var(--gold); width: 20px; height: 20px; margin-top: 3px; }
 @media (max-width: 768px) {
@@ -872,6 +873,66 @@ a:focus-visible, button:focus-visible {
 }
 @media (max-width: 420px) {
     .credentials-tab { padding: 10px 12px; }
+}
+
+/* == HOBBIES: LIGHT EDITORIAL CARDS == */
+.hobbies-section {
+    position: relative;
+    background: #FFFFFF;
+    padding-top: clamp(58px, 7vw, 100px);
+    padding-bottom: clamp(66px, 7vw, 105px);
+    padding-right: clamp(48px, 8vw, 120px);
+}
+.hobbies-section::after {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--nav-space));
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #111111;
+}
+.hobbies-label {
+    color: var(--red) !important;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    margin-bottom: 16px;
+}
+.hobbies-section h2 {
+    font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 4.3vw, 4.3rem);
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: -.025em;
+    margin-bottom: 18px;
+}
+.hobbies-title-accent { color: var(--green); }
+.hobbies-intro { color: #555555 !important; font-size: 1.06rem; line-height: 1.6; max-width: 720px; }
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: clamp(28px, 3.5vw, 46px);
+}
+.hobby-card {
+    min-width: 0;
+    padding: clamp(22px, 2.6vw, 32px);
+    border: 1px solid #D5DDD8;
+    border-radius: 7px;
+    background: #FFFFFF;
+}
+.hobby-icon { display: block; color: var(--green); width: 28px; height: 28px; margin-bottom: 16px; }
+.hobby-card h3 { font-size: 1.08rem; font-weight: 600; line-height: 1.35; margin-bottom: 6px; }
+.hobby-card p { font-size: .9rem; line-height: 1.45; color: #555555 !important; }
+@media (max-width: 768px) {
+    .content-section.hobbies-section { padding: 52px 24px 64px; }
+    .hobbies-section h2 { font-size: clamp(2.35rem, 7.5vw, 3.5rem); }
+    .hobbies-grid { gap: 12px; margin-top: 28px; }
+    .hobby-card { padding: 20px; }
+}
+@media (max-width: 520px) {
+    .hobbies-grid { grid-template-columns: 1fr; }
 }
 
 /* == CONTACT: BLACK / BRIGHT CYAN TYPOGRAPHIC CLOSING == */
