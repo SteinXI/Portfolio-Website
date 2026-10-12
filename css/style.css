@@ -1339,6 +1339,22 @@ a:focus-visible, button:focus-visible {
     .footer-right { justify-content: space-between; width: 100%; flex-wrap: wrap; row-gap: 12px; }
 }
 
+/* Homepage footer: stronger spacing without changing the white Experience page. */
+body:not(.experience-standalone) > .site-footer {
+    padding-inline: clamp(72px, 15vw, 234px);
+}
+body:not(.experience-standalone) > .site-footer .footer-inner {
+    padding-block: 34px;
+}
+@media (max-width: 768px) {
+    body:not(.experience-standalone) > .site-footer {
+        padding: 0 clamp(28px, 7vw, 72px) 96px;
+    }
+    body:not(.experience-standalone) > .site-footer .footer-inner {
+        padding-block: 34px;
+    }
+}
+
 /* == EXPERIENCE ONLY: EDITORIAL CV ON WHITE == */
 body.experience-standalone { background: #FFFFFF; color: #111111; }
 .experience-standalone .experience-topbar { background: #FFFFFF; border-bottom: 1px solid #DCDCDC; }
