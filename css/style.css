@@ -542,14 +542,14 @@ a:focus-visible, button:focus-visible {
     min-height: 140px;
 }
 .education-meta {
-    padding-top: 1px;
+    padding-top: 7px;
     text-align: right;
 }
 .education-date {
     color: var(--school-accent);
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 700;
-    line-height: 1.5;
+    line-height: 1.45;
 }
 .education-marker {
     position: relative;
@@ -560,9 +560,9 @@ a:focus-visible, button:focus-visible {
     position: absolute;
     z-index: 1;
     left: 50%;
-    top: 5px;
-    width: 16px;
-    height: 16px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
     transform: translateX(-50%);
     border-radius: 50%;
     border: 3px solid #FFFFFF;
@@ -573,7 +573,7 @@ a:focus-visible, button:focus-visible {
     content: "";
     position: absolute;
     left: calc(50% - 1px);
-    top: 25px;
+    top: 31px;
     bottom: 0;
     width: 2px;
     background: #D3D7DC;
@@ -611,9 +611,10 @@ a:focus-visible, button:focus-visible {
     .education-section h2 { font-size: clamp(2.7rem, 9vw, 4rem); }
     .education-list { margin-top: 36px; }
     .education-entry { grid-template-columns: minmax(75px, 88px) 22px minmax(0,1fr); column-gap: 10px; min-height: 160px; }
+    .education-meta { padding-top: 5px; }
     .education-date { font-size: 1rem; }
-    .education-marker::before { width: 13px; height: 13px; top: 6px; }
-    .education-marker::after { top: 23px; }
+    .education-marker::before { width: 17px; height: 17px; top: 7px; }
+    .education-marker::after { top: 27px; }
     .education-details h3 { font-size: clamp(1.25rem, 5vw, 1.65rem); }
     .education-details { padding-bottom: 36px; }
     .education-school, .education-note { font-size: 1rem; }
