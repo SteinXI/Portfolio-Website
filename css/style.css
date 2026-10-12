@@ -315,7 +315,7 @@ a:focus-visible, button:focus-visible {
 }
 .focus-inner { width: 100%; }
 .focus-label {
-    color: #DFB76C !important;
+    color: #E58C99 !important;
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.12em;
