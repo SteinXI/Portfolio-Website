@@ -40,13 +40,13 @@ a:focus-visible, button:focus-visible {
 }
 .skip-link:focus { top: 10px; }
 
-/* == 03. INTRODUCTION FRAME == */
+/* == 03. FULL-SCREEN INTRODUCTION WITH EDGE-TO-EDGE DIVIDER == */
 .Intro {
-    --intro-edge: clamp(8px, 1vw, 16px);
     width: 100%;
     min-height: 100vh;
     min-height: 100svh;
-    padding: var(--intro-edge);
+    padding: 0;
+    border-bottom: 2px solid var(--black);
     display: flex;
     align-items: stretch;
     background: var(--white);
@@ -54,13 +54,13 @@ a:focus-visible, button:focus-visible {
 }
 .Intro-box {
     width: 100%;
-    min-height: calc(100vh - 2 * var(--intro-edge));
-    min-height: calc(100svh - 2 * var(--intro-edge));
+    min-height: calc(100vh - 2px);
+    min-height: calc(100svh - 2px);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: clamp(28px, 4vw, 60px) clamp(24px, 6.5vw, 110px);
-    border: 2px solid var(--black);
+    border: 0;
     border-radius: 0;
     background: var(--white);
 }
@@ -172,7 +172,7 @@ a:focus-visible, button:focus-visible {
 .page-content {
     scroll-snap-align: start;
     background: var(--black);
-    padding: 16px clamp(12px, 2vw, 32px) 30px var(--nav-space);
+    padding: 0 clamp(12px, 2vw, 32px) 30px var(--nav-space);
 }
 .content-section {
     width: 100%;
@@ -278,7 +278,6 @@ a:focus-visible, button:focus-visible {
 /* == 09. RESPONSIVE DESIGN == */
 @media (max-width: 768px) {
     :root { --nav-space: 0px; }
-    .Intro { --intro-edge: 10px; }
     .Intro-box {
         padding: 28px clamp(18px, 4vw, 32px);
         justify-content: center;
