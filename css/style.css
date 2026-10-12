@@ -870,6 +870,12 @@ a:focus-visible, button:focus-visible {
     font-weight: 600;
     color: #161616;
 }
+.credential-description {
+    color: #555555 !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 9px;
+}
 .credential-year { margin-top: 9px; color: #666666 !important; font-size: .94rem; line-height: 1.5; }
 .credential-item > .credential-award-icon { color: #008FA8; width: 20px; height: 20px; margin-top: 3px; }
 @media (max-width: 768px) {
