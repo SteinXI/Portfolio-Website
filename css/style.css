@@ -494,11 +494,11 @@ a:focus-visible, button:focus-visible {
     .experience-section h2 { font-size: clamp(2.7rem, 9vw, 4rem); }
 }
 
-/* == EDUCATION: NAVY EDITORIAL TIMELINE == */
+/* == EDUCATION: ACADEMIC JOURNEY WITH INSTITUTION MILESTONES == */
 .education-section {
     position: relative;
     padding-top: clamp(58px, 7vw, 100px);
-    padding-bottom: clamp(64px, 7vw, 105px);
+    padding-bottom: clamp(70px, 8vw, 118px);
     padding-right: clamp(48px, 8vw, 120px);
 }
 .education-section::after {
@@ -533,52 +533,102 @@ a:focus-visible, button:focus-visible {
     max-width: 720px;
 }
 .education-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-top: clamp(40px, 5vw, 70px);
+    margin-top: clamp(42px, 5vw, 70px);
 }
 .education-entry {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background: #F3F6FB;
-    border: 1px solid #DFE7F4;
-    border-radius: 10px;
-    padding: clamp(20px, 3vw, 30px);
+    display: grid;
+    grid-template-columns: minmax(110px, 150px) 30px minmax(0, 1fr);
+    column-gap: clamp(16px, 2.4vw, 35px);
+    min-height: 140px;
 }
-.education-entry:first-child { border-color: #C7D6ED; }
+.education-meta {
+    padding-top: 1px;
+    text-align: right;
+}
 .education-date {
+    color: #505050;
+    font-size: .96rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.education-marker {
+    position: relative;
+    min-height: 100%;
+}
+.education-marker::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 0 0 1px var(--school-accent);
+    background: var(--school-accent);
+}
+.education-marker::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 25px;
+    bottom: 0;
+    width: 2px;
+    background: #D3D7DC;
+}
+.education-entry:last-child .education-marker::after { bottom: -34px; }
+.education-details {
+    padding-bottom: clamp(36px, 4.5vw, 64px);
+    min-width: 0;
+}
+.education-entry:last-child .education-details { padding-bottom: 0; }
+.education-details::before {
+    content: "";
     display: block;
-    color: var(--navy);
-    font-size: .92rem;
-    font-weight: 700;
-    letter-spacing: .025em;
+    width: 48px;
+    height: 3px;
+    background: var(--school-accent);
+    border-radius: 3px;
+    margin: 6px 0 17px;
 }
 .education-details h3 {
+    font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
     color: var(--black);
-    font-size: clamp(1.18rem, 1.65vw, 1.48rem);
-    font-weight: 600;
-    line-height: 1.4;
-    margin-bottom: 7px;
+    font-size: clamp(1.38rem, 2vw, 1.92rem);
+    font-weight: 500;
+    line-height: 1.32;
+    letter-spacing: -.012em;
+    margin: 0 0 12px;
 }
 .education-school {
-    color: var(--navy) !important;
+    color: #333333 !important;
     font-size: 1.04rem;
-    line-height: 1.55;
+    line-height: 1.65;
     font-weight: 500;
 }
 .education-note {
-    color: var(--grey) !important;
-    font-size: .98rem;
-    line-height: 1.6;
-    margin-top: 6px;
+    color: #6B6B6B !important;
+    font-size: .99rem;
+    line-height: 1.65;
+    margin-top: 8px;
 }
 @media (max-width: 768px) {
-    .content-section.education-section { padding: 52px 24px 64px; }
+    .content-section.education-section { padding: 52px 24px 76px; }
     .education-section h2 { font-size: clamp(2.7rem, 9vw, 4rem); }
-    .education-list { gap: 12px; margin-top: 36px; }
-    .education-entry { padding: 20px; }
+    .education-list { margin-top: 36px; }
+    .education-entry { grid-template-columns: minmax(75px, 88px) 22px minmax(0,1fr); column-gap: 10px; min-height: 160px; }
+    .education-date { font-size: .8rem; }
+    .education-marker::before { width: 13px; height: 13px; top: 6px; }
+    .education-marker::after { top: 23px; }
+    .education-details h3 { font-size: clamp(1.25rem, 5vw, 1.65rem); }
+    .education-details { padding-bottom: 36px; }
+    .education-school, .education-note { font-size: .93rem; }
+}
+@media (max-width: 380px) {
+    .education-entry { grid-template-columns: 68px 18px minmax(0,1fr); column-gap: 8px; }
+    .education-date { font-size: .75rem; }
 }
 
 /* == 08. FLOATING NAVIGATION == */
