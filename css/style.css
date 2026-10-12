@@ -456,6 +456,26 @@ a:focus-visible, button:focus-visible {
     margin-bottom: 10px;
 }
 .experience-additional strong { color: var(--black); }
+/* Accent is assigned by role, with restrained colour in the rule and tags. */
+.experience-entry-1 { --experience-accent: #B73E52; --experience-tint: #FFF0F2; }
+.experience-entry-2 { --experience-accent: #193F84; --experience-tint: #EDF2FC; }
+.experience-entry-3 { --experience-accent: #00865F; --experience-tint: #E9F6F0; }
+.experience-entry { border-top: 2px solid var(--experience-accent, #CCCCCC); }
+.experience-entry .experience-date { color: var(--experience-accent, var(--grey)); font-weight: 700; }
+.experience-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+.experience-tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 5px 11px;
+    border: 1px solid var(--experience-accent, #CCCCCC);
+    border-radius: 4px;
+    background: var(--experience-tint, #F5F5F5);
+    color: var(--experience-accent, var(--black));
+    font-size: .82rem;
+    line-height: 1.35;
+    font-weight: 600;
+}
 .experience-more {
     display: inline-flex;
     align-items: center;
