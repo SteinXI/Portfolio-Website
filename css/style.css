@@ -526,7 +526,7 @@ a:focus-visible, button:focus-visible {
     letter-spacing: -.025em;
     margin-bottom: 21px;
 }
-.education-title-accent { color: var(--navy); }
+.education-title-accent { color: var(--green); }
 .education-intro > p:last-child {
     color: var(--grey);
     font-size: clamp(1.05rem, 1.3vw, 1.18rem);
@@ -899,7 +899,7 @@ a:focus-visible, button:focus-visible {
 }
 .contact-section h2 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(2.15rem, 3.35vw, 3.3rem);
+    font-size: clamp(2.7rem, 4.5vw, 4.5rem);
     font-weight: 600;
     line-height: 1.14;
     letter-spacing: -.025em;
@@ -909,7 +909,7 @@ a:focus-visible, button:focus-visible {
 .contact-title-accent { color: var(--cyan); }
 .contact-intro {
     color: #D1D1D1 !important;
-    font-size: clamp(1.34rem, 1.9vw, 1.53rem);
+    font-size: clamp(1.43rem, 2.05vw, 1.65rem);
     line-height: 1.65;
     max-width: 800px;
 }
@@ -974,7 +974,7 @@ a:focus-visible, button:focus-visible {
 .site-footer a { color: var(--cyan); }
 @media (max-width: 768px) {
     .content-section.contact-section { padding: 52px 24px 70px; }
-    .contact-section h2 { font-size: clamp(2.1rem, 6.4vw, 2.75rem); }
+    .contact-section h2 { font-size: clamp(2.45rem, 7.8vw, 3.65rem); }
     .contact-secondary { grid-template-columns: 1fr; gap: 0; padding-top: 0; }
     .contact-method { padding: 18px 0; border-bottom: 1px solid #383838; }
     .contact-method:last-child { border-bottom: 0; }
