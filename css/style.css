@@ -966,7 +966,7 @@ a:focus-visible, button:focus-visible {
 }
 .contact-section h2 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(3.15rem, 5.2vw, 5.15rem);
+    font-size: clamp(2.9rem, 4.8vw, 4.75rem);
     font-weight: 400;
     line-height: 1.14;
     letter-spacing: -.025em;
@@ -979,13 +979,13 @@ a:focus-visible, button:focus-visible {
     font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(1.72rem, 2.65vw, 2.25rem);
-    line-height: 1.55;
+    font-size: clamp(1.56rem, 2.35vw, 2.05rem);
+    line-height: 1.45;
     max-width: 790px;
 }
 .contact-intro-line { display: block; }
 .contact-details {
-    margin-top: clamp(42px, 5.5vw, 78px);
+    margin-top: clamp(32px, 4vw, 56px);
     border-top: 2px solid var(--cyan);
 }
 .contact-primary {
@@ -993,11 +993,11 @@ a:focus-visible, button:focus-visible {
     justify-content: space-between;
     align-items: center;
     gap: 18px;
-    padding: 29px 0 31px;
+    padding: 20px 12px 22px;
     text-decoration: none;
     border-bottom: 1px solid #383838;
 }
-.contact-primary-text { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.contact-primary-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .contact-method-label {
     color: var(--cyan);
     font-size: .875rem;
@@ -1023,17 +1023,18 @@ a:focus-visible, button:focus-visible {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: clamp(16px, 3vw, 40px);
-    padding-top: 29px;
+    padding-top: 17px;
 }
 .contact-method {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 3px;
     min-width: 0;
+    padding: 4px 12px 10px;
     color: #FFFFFF;
     text-decoration: none;
 }
-.contact-method-value { color: #FFFFFF; font-size: .875rem; line-height: 1.5; overflow-wrap: anywhere; }
+.contact-method-value { color: #FFFFFF; font-size: .875rem; line-height: 1.35; overflow-wrap: anywhere; }
 .contact-primary:hover .contact-primary-address, .contact-primary:focus-visible .contact-primary-address,
 .contact-method:hover .contact-method-value, .contact-method:focus-visible .contact-method-value { color: var(--cyan); }
 .contact-section a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 5px; }
@@ -1045,11 +1046,11 @@ a:focus-visible, button:focus-visible {
 .site-footer a { color: var(--cyan); }
 @media (max-width: 768px) {
     .content-section.contact-section { padding: 52px 24px 70px; }
-    .contact-section h2 { font-size: clamp(2.65rem, 8.4vw, 4.1rem); }
+    .contact-section h2 { font-size: clamp(2.45rem, 7.7vw, 3.8rem); }
     .contact-secondary { grid-template-columns: 1fr; gap: 0; padding-top: 0; }
-    .contact-method { padding: 18px 0; border-bottom: 1px solid #383838; }
+    .contact-method { padding: 12px 12px; border-bottom: 1px solid #383838; }
     .contact-method:last-child { border-bottom: 0; }
-    .contact-primary { padding: 25px 0; }
+    .contact-primary { padding: 18px 12px; }
     .contact-intro-line { display: inline; }
     .contact-intro-line:not(:last-child)::after { content: ' '; white-space: pre; }
 }
@@ -1123,9 +1124,21 @@ a:focus-visible, button:focus-visible {
     color: #333333;
     text-decoration: none;
 }
-.floating-nav a:hover, .floating-nav a.active {
-    color: var(--white);
-    background: var(--red);
+/* Match each navigation item's hover and selected state to its section heading accent. */
+.floating-nav a[href="#home"] { --nav-accent: var(--red); --nav-ink: #FFFFFF; }
+.floating-nav a[href="#about"],
+.floating-nav a[href="#experience"] { --nav-accent: var(--navy); --nav-ink: #FFFFFF; }
+.floating-nav a[href="#research"],
+.floating-nav a[href="#languages"],
+.floating-nav a[href="#credentials"] { --nav-accent: var(--gold); --nav-ink: #111111; }
+.floating-nav a[href="#education"],
+.floating-nav a[href="#hobbies"] { --nav-accent: var(--green); --nav-ink: #FFFFFF; }
+.floating-nav a[href="#contact"] { --nav-accent: var(--cyan); --nav-ink: #111111; }
+.floating-nav a:hover,
+.floating-nav a:focus-visible,
+.floating-nav a.active {
+    color: var(--nav-ink, #FFFFFF);
+    background: var(--nav-accent, var(--red));
 }
 .nav-icon {
     display: flex;
