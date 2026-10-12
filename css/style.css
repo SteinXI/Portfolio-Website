@@ -828,13 +828,13 @@ a:focus-visible, button:focus-visible {
     display: flex;
     align-items: flex-start;
     gap: 18px;
-    border: 1px solid #E8DBB5;
+    border: 2px solid #E4CE77;
     border-radius: 7px;
     padding: 23px 26px 23px 22px;
     background: #FFFFFF;
     transition: background .18s ease, border-color .18s ease;
 }
-.credential-item:hover { background: #FFFBEF; border-color: #D9BA68; }
+.credential-item:hover { background: #FFFBEF; border-color: #D1AA19; }
 .credential-item::before {
     content: "";
     align-self: stretch;
@@ -850,7 +850,7 @@ a:focus-visible, button:focus-visible {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .07em;
-    color: var(--gold-dark) !important;
+    color: #947300 !important;
     margin-bottom: 7px;
 }
 .credential-item h3 {
