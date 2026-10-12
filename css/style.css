@@ -342,8 +342,8 @@ a:focus-visible, button:focus-visible {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: clamp(32px, 5vw, 80px);
-    row-gap: clamp(32px, 4.5vw, 64px);
-    margin-top: clamp(48px, 6vw, 82px);
+    row-gap: clamp(18px, 2.5vw, 34px);
+    margin-top: clamp(25px, 3vw, 43px);
 }
 .focus-item {
     min-width: 0;
@@ -382,8 +382,8 @@ a:focus-visible, button:focus-visible {
     }
     .focus-grid {
         grid-template-columns: 1fr;
-        row-gap: 32px;
-        margin-top: 42px;
+        row-gap: 22px;
+        margin-top: 27px;
     }
     .focus-section h2 { font-size: clamp(2.8rem, 9vw, 4.2rem); }
 }
@@ -426,7 +426,7 @@ a:focus-visible, button:focus-visible {
     color: var(--grey);
     max-width: 720px;
 }
-.experience-list { margin-top: clamp(40px, 5vw, 70px); }
+.experience-list { margin-top: clamp(24px, 3vw, 42px); }
 .experience-entry {
     border-top: 1px solid #CCCCCC;
     display: grid;
@@ -534,13 +534,13 @@ a:focus-visible, button:focus-visible {
     max-width: 720px;
 }
 .education-list {
-    margin-top: clamp(42px, 5vw, 70px);
+    margin-top: clamp(25px, 3vw, 43px);
 }
 .education-entry {
     display: grid;
     grid-template-columns: minmax(110px, 150px) 30px minmax(0, 1fr);
     column-gap: clamp(16px, 2.4vw, 35px);
-    min-height: 140px;
+    min-height: 0;
 }
 .education-meta {
     padding-top: 7px;
@@ -581,7 +581,7 @@ a:focus-visible, button:focus-visible {
 }
 .education-entry:last-child .education-marker::after { bottom: -34px; }
 .education-details {
-    padding-bottom: clamp(36px, 4.5vw, 64px);
+    padding-bottom: clamp(20px, 2.8vw, 36px);
     min-width: 0;
 }
 .education-entry:last-child .education-details { padding-bottom: 0; }
@@ -610,14 +610,14 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 768px) {
     .content-section.education-section { padding: 52px 24px 76px; }
     .education-section h2 { font-size: clamp(2.7rem, 9vw, 4rem); }
-    .education-list { margin-top: 36px; }
-    .education-entry { grid-template-columns: minmax(75px, 88px) 22px minmax(0,1fr); column-gap: 10px; min-height: 160px; }
+    .education-list { margin-top: 25px; }
+    .education-entry { grid-template-columns: minmax(75px, 88px) 22px minmax(0,1fr); column-gap: 10px; min-height: 0; }
     .education-meta { padding-top: 5px; }
     .education-date { font-size: 1rem; }
     .education-marker::before { width: 17px; height: 17px; top: 7px; }
     .education-marker::after { top: 27px; }
     .education-details h3 { font-size: clamp(1.25rem, 5vw, 1.65rem); }
-    .education-details { padding-bottom: 36px; }
+    .education-details { padding-bottom: 24px; }
     .education-school, .education-note { font-size: 1rem; }
 }
 @media (max-width: 380px) {
@@ -856,9 +856,10 @@ a:focus-visible, button:focus-visible {
 .credential-item h3 {
     font-size: .9rem;
     line-height: 1.38;
-    font-weight: 600;
+    font-weight: 400;
     color: #161616;
 }
+.credential-item h3 strong { font-weight: 700; }
 .credential-year { margin-top: 4px; color: #666666 !important; font-size: .86rem; line-height: 1.35; }
 .credential-item > .credential-award-icon { color: var(--gold); width: 20px; height: 20px; margin-top: 3px; }
 @media (max-width: 768px) {
@@ -910,12 +911,13 @@ a:focus-visible, button:focus-visible {
 .contact-intro {
     color: #D1D1D1 !important;
     font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
-    font-style: italic;
+    font-style: normal;
     font-weight: 400;
     font-size: clamp(1.72rem, 2.65vw, 2.25rem);
     line-height: 1.55;
     max-width: 790px;
 }
+.contact-intro-line { display: block; }
 .contact-details {
     margin-top: clamp(42px, 5.5vw, 78px);
     border-top: 2px solid var(--cyan);
@@ -929,7 +931,7 @@ a:focus-visible, button:focus-visible {
     text-decoration: none;
     border-bottom: 1px solid #383838;
 }
-.contact-primary-text { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.contact-primary-text { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
 .contact-method-label {
     color: var(--cyan);
     font-size: .875rem;
@@ -960,7 +962,7 @@ a:focus-visible, button:focus-visible {
 .contact-method {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 5px;
     min-width: 0;
     color: #FFFFFF;
     text-decoration: none;
@@ -982,6 +984,8 @@ a:focus-visible, button:focus-visible {
     .contact-method { padding: 18px 0; border-bottom: 1px solid #383838; }
     .contact-method:last-child { border-bottom: 0; }
     .contact-primary { padding: 25px 0; }
+    .contact-intro-line { display: inline; }
+    .contact-intro-line:not(:last-child)::after { content: ' '; white-space: pre; }
 }
 @media (prefers-reduced-motion: reduce) {
     .contact-link-arrow { transition: none; }
