@@ -6,9 +6,10 @@
     --red: #C51F35;
     --linkedin-blue: #0A66C2;
     --navy: #193F84;
-    --cyan: #008FA8;
+    --cyan: #55C9D9;
     --green: #00865F;
-    --gold: #C58B18;
+    --gold: #FFD700;
+    --gold-dark: #806300;
     --light-border: #DDDDDD;
     --nav-space: 132px;
 }
@@ -849,7 +850,7 @@ a:focus-visible, button:focus-visible {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .07em;
-    color: #94620B !important;
+    color: var(--gold-dark) !important;
     margin-bottom: 7px;
 }
 .credential-item h3 {
