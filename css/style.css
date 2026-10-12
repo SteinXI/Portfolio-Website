@@ -61,6 +61,7 @@ a:focus-visible, button:focus-visible {
     flex-direction: column;
     justify-content: space-evenly;
     padding: clamp(28px, 4vw, 60px) clamp(24px, 6.5vw, 110px);
+    padding-right: clamp(36px, 8vw, 136px);
     border: 0;
     border-radius: 0;
     background: var(--white);
@@ -993,7 +994,7 @@ a:focus-visible, button:focus-visible {
     justify-content: space-between;
     align-items: center;
     gap: 18px;
-    padding: 20px 12px 22px;
+    padding: 20px 24px 22px 12px;
     text-decoration: none;
     border-bottom: 1px solid #383838;
 }
@@ -1030,7 +1031,7 @@ a:focus-visible, button:focus-visible {
     flex-direction: column;
     gap: 3px;
     min-width: 0;
-    padding: 4px 12px 10px;
+    padding: 4px 24px 10px 12px;
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -1048,9 +1049,9 @@ a:focus-visible, button:focus-visible {
     .content-section.contact-section { padding: 52px 24px 70px; }
     .contact-section h2 { font-size: clamp(2.45rem, 7.7vw, 3.8rem); }
     .contact-secondary { grid-template-columns: 1fr; gap: 0; padding-top: 0; }
-    .contact-method { padding: 12px 12px; border-bottom: 1px solid #383838; }
+    .contact-method { padding: 12px 24px 12px 12px; border-bottom: 1px solid #383838; }
     .contact-method:last-child { border-bottom: 0; }
-    .contact-primary { padding: 18px 12px; }
+    .contact-primary { padding: 18px 24px 18px 12px; }
     .contact-intro-line { display: inline; }
     .contact-intro-line:not(:last-child)::after { content: ' '; white-space: pre; }
 }
@@ -1200,6 +1201,7 @@ a:focus-visible, button:focus-visible {
     :root { --nav-space: 0px; }
     .Intro-box {
         padding: 28px clamp(18px, 4vw, 32px);
+        padding-right: clamp(26px, 5vw, 40px);
         justify-content: center;
         gap: clamp(16px, 3vh, 30px);
     }
