@@ -593,7 +593,7 @@ a:focus-visible, button:focus-visible {
     font-weight: 500;
     line-height: 1.32;
     letter-spacing: -.012em;
-    margin: 0 0 5px;
+    margin: 0 0 10px;
 }
 .education-school {
     color: #333333 !important;
@@ -604,8 +604,8 @@ a:focus-visible, button:focus-visible {
 .education-note {
     color: #6B6B6B !important;
     font-size: 1rem;
-    line-height: 1.4;
-    margin-top: 3px;
+    line-height: 1.5;
+    margin-top: 9px;
 }
 @media (max-width: 768px) {
     .content-section.education-section { padding: 52px 24px 76px; }
@@ -875,12 +875,12 @@ a:focus-visible, button:focus-visible {
     .credentials-tab { padding: 10px 12px; }
 }
 
-/* == HOBBIES: LIGHT EDITORIAL CARDS == */
+/* == HOBBIES: COMPACT TWO-COLUMN EDITORIAL LIST == */
 .hobbies-section {
     position: relative;
     background: #FFFFFF;
-    padding-top: clamp(58px, 7vw, 100px);
-    padding-bottom: clamp(66px, 7vw, 105px);
+    padding-top: clamp(52px, 6vw, 84px);
+    padding-bottom: clamp(56px, 6vw, 88px);
     padding-right: clamp(48px, 8vw, 120px);
 }
 .hobbies-section::after {
@@ -892,44 +892,49 @@ a:focus-visible, button:focus-visible {
     height: 2px;
     background: #111111;
 }
-.hobbies-label {
-    color: var(--red) !important;
-    font-size: .9rem;
-    font-weight: 700;
-    letter-spacing: .12em;
-    margin-bottom: 16px;
-}
+.hobbies-label { color: var(--red) !important; font-size: .9rem; font-weight: 700; letter-spacing: .12em; margin-bottom: 16px; }
 .hobbies-section h2 {
     font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
     font-size: clamp(2.5rem, 4.3vw, 4.3rem);
     font-weight: 400;
     line-height: 1.14;
     letter-spacing: -.025em;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 .hobbies-title-accent { color: var(--green); }
-.hobbies-intro { color: #555555 !important; font-size: 1.06rem; line-height: 1.6; max-width: 720px; }
+.hobbies-intro { color: #555555 !important; font-size: 1.06rem; line-height: 1.55; max-width: 720px; }
 .hobbies-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    margin-top: clamp(28px, 3.5vw, 46px);
+    column-gap: clamp(24px, 4vw, 68px);
+    row-gap: 0;
+    margin-top: clamp(19px, 2.6vw, 34px);
 }
 .hobby-card {
+    --hobby-accent: var(--green);
+    display: flex;
+    align-items: flex-start;
     min-width: 0;
-    padding: clamp(22px, 2.6vw, 32px);
-    border: 1px solid #D5DDD8;
-    border-radius: 7px;
-    background: #FFFFFF;
+    gap: 13px;
+    padding: 20px 0;
+    border: none;
+    border-bottom: 1px solid #D9DDDD;
+    border-radius: 0;
+    background: transparent;
 }
-.hobby-icon { display: block; color: var(--green); width: 28px; height: 28px; margin-bottom: 16px; }
-.hobby-card h3 { font-size: 1.08rem; font-weight: 600; line-height: 1.35; margin-bottom: 6px; }
+.hobby-card:nth-child(1) { --hobby-accent: var(--red); }
+.hobby-card:nth-child(2) { --hobby-accent: var(--gold); }
+.hobby-card:nth-child(3) { --hobby-accent: var(--cyan); }
+.hobby-card:nth-child(4) { --hobby-accent: var(--green); }
+.hobby-icon { display: block; flex: 0 0 30px; color: var(--hobby-accent); width: 30px; height: 30px; margin: 0; }
+.hobby-card-copy { flex: 1 1 auto; min-width: 0; }
+.hobby-card h3 { font-size: 1.06rem; font-weight: 600; line-height: 1.35; margin: 0 0 4px; }
 .hobby-card p { font-size: .9rem; line-height: 1.45; color: #555555 !important; }
 @media (max-width: 768px) {
     .content-section.hobbies-section { padding: 52px 24px 64px; }
     .hobbies-section h2 { font-size: clamp(2.35rem, 7.5vw, 3.5rem); }
-    .hobbies-grid { gap: 12px; margin-top: 28px; }
-    .hobby-card { padding: 20px; }
+    .hobbies-grid { column-gap: 22px; margin-top: 20px; }
+    .hobby-card { padding: 17px 0; gap: 10px; }
 }
 @media (max-width: 520px) {
     .hobbies-grid { grid-template-columns: 1fr; }
