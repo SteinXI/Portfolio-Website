@@ -445,6 +445,9 @@ a:focus-visible, button:focus-visible {
 .experience-detail h4 { font-size: clamp(1.18rem, 1.55vw, 1.45rem); line-height: 1.4; margin-bottom: 11px; }
 .experience-note { font-size: .85em; font-weight: 400; color: var(--grey); }
 .experience-detail p { color: var(--grey); font-size: 1.02rem; line-height: 1.8; }
+.experience-responsibilities { list-style: disc; padding-left: 1.25rem; margin: 4px 0 0; color: var(--grey); font-size: 1.02rem; line-height: 1.8; }
+.experience-responsibilities li + li { margin-top: 9px; }
+.experience-responsibilities li::marker { color: var(--green); }
 .experience-additional {
     border-top: 1px solid #CCCCCC;
     padding: 22px 0 8px;
