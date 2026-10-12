@@ -62,3 +62,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     updateNavigation();
 });
+
+// == CREDENTIALS: ACCESSIBLE CATEGORY TABS ==
+document.addEventListener("DOMContentLoaded", () => {
+    const tabList = document.querySelector(".credentials-tabs");
+    if (!tabList) return;
+    const tabs = [...tabList.querySelectorAll('[role="tab"]')];
+    const panels = tabs.map(tab => document.getElementById(tab.getAttribute("aria-controls")));
+    function activateTab(index, moveFocus = false) {
+        tabs.forEach((tab, i) => {
+            const selected = i === index;
+            tab.setAttribute("aria-selected", String(selected));
+            tab.tabIndex = selected ? 0 : -1;
+            if (panels[i]) panels[i].hidden = !selected;
+        });
+        if (moveFocus) tabs[index].focus();
+    }
+    tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => activateTab(index));
+        tab.addEventListener("keydown", event => {
+            let next = index;
+            if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+            else if (event.key === "ArrowLeft") next = (index - 1 + tabs.length) % tabs.length;
+            else if (event.key === "Home") next = 0;
+            else if (event.key === "End") next = tabs.length - 1;
+            else return;
+            event.preventDefault();
+            activateTab(next, true);
+        });
+    });
+    activateTab(0);
+});
