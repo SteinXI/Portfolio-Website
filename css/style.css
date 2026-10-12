@@ -171,7 +171,7 @@ a:focus-visible, button:focus-visible {
 /* == 07. REMAINING SECTIONS & LEFT NAVIGATION SPACE == */
 .page-content {
     scroll-snap-align: start;
-    background: var(--black);
+    background: var(--white);
     padding: 0 clamp(12px, 2vw, 32px) 30px var(--nav-space);
 }
 .content-section {
@@ -192,9 +192,9 @@ a:focus-visible, button:focus-visible {
     color: inherit;
 }
 .dark-section {
-    background: var(--black);
-    color: var(--white);
-    border: 1px solid #404040;
+    background: var(--white);
+    color: var(--black);
+    border: 0;
 }
 /* == ABOUT ME: EDITORIAL TWO-COLUMN LAYOUT == */
 .about-section {
@@ -222,6 +222,19 @@ a:focus-visible, button:focus-visible {
     margin: 0;
     max-width: 13ch;
 }
+.about-reflection {
+    max-width: 35ch;
+    margin-top: clamp(25px, 3vw, 40px);
+    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+    line-height: 1.7;
+    color: var(--grey) !important;
+}
+.about-journey-line {
+    display: block;
+    width: min(100%, 320px);
+    height: auto;
+    margin-top: 22px;
+}
 .about-biography {
     max-width: 690px;
 }
@@ -246,6 +259,8 @@ a:focus-visible, button:focus-visible {
     .about-section { padding-block: 48px; }
     .about-label { margin-bottom: 16px; }
     .about-section h2 { font-size: clamp(2.7rem, 9vw, 4rem); }
+    .about-reflection { margin-top: 22px; }
+    .about-journey-line { margin-top: 14px; }
     .about-biography p { font-size: 1.05rem; line-height: 1.75; }
 }
 
@@ -304,14 +319,14 @@ a:focus-visible, button:focus-visible {
 .mobile-menu-button { display: none; }
 .site-footer {
     padding: 25px 24px 25px var(--nav-space);
-    background: var(--black);
-    color: var(--white);
-    border-top: 1px solid #404040;
+    background: var(--white);
+    color: var(--black);
+    border-top: 1px solid var(--light-border);
     display: flex;
     justify-content: space-between;
     gap: 16px;
 }
-.site-footer a { color: #F0BB55; }
+.site-footer a { color: var(--navy); }
 
 /* == 09. RESPONSIVE DESIGN == */
 @media (max-width: 768px) {
