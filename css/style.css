@@ -676,7 +676,7 @@ a:focus-visible, button:focus-visible {
     color: #FFFFFF;
     margin-bottom: 24px;
 }
-.languages-title-accent { color: #DFB76C; }
+.languages-title-accent { color: #55C0D0; }
 .languages-introduction {
     max-width: 830px;
     color: #C9C9C9 !important;
@@ -703,7 +703,7 @@ a:focus-visible, button:focus-visible {
     font-family: "Bodoni Moda", Georgia, serif;
     font-size: clamp(2.8rem, 4vw, 4rem);
     font-weight: 400;
-    color: #DFB76C;
+    color: #55C0D0;
     line-height: 1.2;
     margin-bottom: 16px;
 }
@@ -729,8 +729,8 @@ a:focus-visible, button:focus-visible {
     font-size: 1.15rem;
     line-height: 1;
 }
-.star-filled { color: #DFB76C; }
-.star-empty { color: #5A5A5A; }
+.star-filled { color: #55C0D0; font-family: Arial, Helvetica, sans-serif; font-weight: 700; }
+.star-empty { color: #777777; font-family: Arial, Helvetica, sans-serif; font-weight: 400; }
 @media (max-width: 1000px) {
     .language-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .language-cell:nth-child(2) { border-right: 0; }
