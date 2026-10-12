@@ -1468,3 +1468,128 @@ body.experience-standalone { background: #FFFFFF; color: #111111; }
     .experience-standalone .experience-brand { font-size: .88rem; }
     .experience-standalone .experience-back { font-size: .79rem; }
 }
+
+
+/* == WHITE HOMEPAGE PREVIEW: RESEARCH, LANGUAGES, CONTACT, FOOTER ==
+   This palette experiment is scoped to the homepage and intentionally
+   preserves the separate Experience page and every section's layout. */
+body:not(.experience-standalone) .page-content .focus-section,
+body:not(.experience-standalone) .page-content .languages-section,
+body:not(.experience-standalone) .page-content .contact-section {
+    background: #FFFFFF;
+    color: #111111;
+}
+body:not(.experience-standalone) .focus-section::before,
+body:not(.experience-standalone) .languages-section::before,
+body:not(.experience-standalone) .contact-section::before {
+    background: #FFFFFF;
+}
+body:not(.experience-standalone) .focus-section::after,
+body:not(.experience-standalone) .languages-section::after {
+    background: #DDDDDD;
+}
+body:not(.experience-standalone) .focus-section h2,
+body:not(.experience-standalone) .languages-section h2,
+body:not(.experience-standalone) .contact-section h2 {
+    color: #111111;
+}
+body:not(.experience-standalone) .focus-title-accent,
+body:not(.experience-standalone) .languages-title-accent {
+    color: #947300;
+}
+body:not(.experience-standalone) .focus-introduction,
+body:not(.experience-standalone) .languages-introduction {
+    color: #555555 !important;
+}
+body:not(.experience-standalone) .focus-item h3,
+body:not(.experience-standalone) .language-cell h3 {
+    color: #111111;
+}
+body:not(.experience-standalone) .focus-item p {
+    color: #555555 !important;
+}
+body:not(.experience-standalone) .focus-item-5 {
+    --focus-accent: #B58B00;
+}
+body:not(.experience-standalone) .focus-item-6 {
+    --focus-accent: #858585;
+}
+body:not(.experience-standalone) .language-grid {
+    border-color: #D6D6D6;
+}
+body:not(.experience-standalone) .language-cell {
+    border-color: #D6D6D6;
+}
+body:not(.experience-standalone) .language-cell:nth-child(-n+2) {
+    border-bottom-color: #D6D6D6;
+}
+body:not(.experience-standalone) .language-glyph,
+body:not(.experience-standalone) .star-filled {
+    color: #B58B00;
+}
+body:not(.experience-standalone) .language-level {
+    color: #555555 !important;
+}
+body:not(.experience-standalone) .star-empty {
+    color: #B9B9B9;
+}
+body:not(.experience-standalone) .contact-title-accent {
+    color: #007F96;
+}
+body:not(.experience-standalone) .contact-intro {
+    color: #444444 !important;
+}
+body:not(.experience-standalone) .contact-earth-icon {
+    color: var(--cyan);
+}
+body:not(.experience-standalone) .contact-details {
+    border-top-color: #B2DBE1;
+}
+body:not(.experience-standalone) .contact-primary,
+body:not(.experience-standalone) .contact-method {
+    border-color: #B2DBE1;
+}
+body:not(.experience-standalone) .contact-method:not(:first-child) {
+    border-left-color: transparent;
+}
+body:not(.experience-standalone) .contact-primary .contact-method-label {
+    color: #666666;
+}
+body:not(.experience-standalone) .contact-method-label {
+    color: #007F96;
+}
+body:not(.experience-standalone) .contact-primary-address,
+body:not(.experience-standalone) .contact-method-value {
+    color: #222222;
+}
+body:not(.experience-standalone) .contact-link-arrow {
+    color: #007F96;
+}
+body:not(.experience-standalone) .contact-primary:hover .contact-primary-address,
+body:not(.experience-standalone) .contact-primary:focus-visible .contact-primary-address,
+body:not(.experience-standalone) .contact-method:hover .contact-method-value,
+body:not(.experience-standalone) .contact-method:focus-visible .contact-method-value {
+    color: #007F96;
+}
+body:not(.experience-standalone) .contact-section a:focus-visible {
+    outline-color: #007F96;
+}
+body:not(.experience-standalone) > .site-footer {
+    background: #FFFFFF;
+    color: #111111;
+    border-top: 1px solid #111111;
+}
+body:not(.experience-standalone) > .site-footer .footer-name {
+    color: #111111;
+}
+body:not(.experience-standalone) > .site-footer .footer-copyright {
+    color: #666666;
+}
+body:not(.experience-standalone) .floating-nav {
+    border-color: #CFCFCF;
+}
+@media (max-width: 768px) {
+    body:not(.experience-standalone) .contact-method:not(:first-child) {
+        border-left-color: #B2DBE1;
+    }
+}
