@@ -758,7 +758,7 @@ a:focus-visible, button:focus-visible {
     }
 }
 
-/* == CREDENTIALS: INTERACTIVE WHITE AND CYAN DIRECTORY == */
+/* == CREDENTIALS: INTERACTIVE WHITE AND GOLD DIRECTORY == */
 .credentials-section {
     position: relative;
     background: #FFFFFF;
@@ -796,7 +796,7 @@ a:focus-visible, button:focus-visible {
     letter-spacing: -.025em;
     margin: 0;
 }
-.credentials-title-accent { color: #008FA8; }
+.credentials-title-accent { color: #94620B; }
 .credentials-heading-icon {
     display: flex;
     align-items: center;
@@ -805,8 +805,8 @@ a:focus-visible, button:focus-visible {
     width: 54px;
     height: 54px;
     border-radius: 8px;
-    color: #008FA8;
-    background: #E7F6F8;
+    color: #C58B18;
+    background: #FFF5D9;
 }
 .credential-award-icon { width: 24px; height: 24px; flex: 0 0 24px; }
 .credentials-heading-icon .credential-award-icon { width: 28px; height: 28px; }
@@ -818,8 +818,8 @@ a:focus-visible, button:focus-visible {
 }
 .credentials-tab {
     background: #FFFFFF;
-    color: #20636C;
-    border: 1px solid #BCDDE3;
+    color: #805710;
+    border: 1px solid #E4CE93;
     border-radius: 5px;
     font: 600 .95rem/1.3 Arial, Helvetica, sans-serif;
     padding: 11px 18px;
@@ -827,11 +827,11 @@ a:focus-visible, button:focus-visible {
     transition: background .18s ease, border-color .18s ease, color .18s ease;
 }
 .credentials-tab[aria-selected="true"] {
-    background: #008FA8;
-    color: #FFFFFF;
-    border-color: #008FA8;
+    background: #C58B18;
+    color: #111111;
+    border-color: #C58B18;
 }
-.credentials-tab:hover:not([aria-selected="true"]) { background: #EAF7F9; }
+.credentials-tab:hover:not([aria-selected="true"]) { background: #FFF9E9; }
 .credentials-tab:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
 .credentials-panel { display: grid; gap: 12px; }
 .credentials-panel[hidden] { display: none; }
@@ -839,20 +839,20 @@ a:focus-visible, button:focus-visible {
     display: flex;
     align-items: flex-start;
     gap: 18px;
-    border: 1px solid #CCE5E9;
+    border: 1px solid #E8DBB5;
     border-radius: 7px;
     padding: 23px 26px 23px 22px;
     background: #FFFFFF;
     transition: background .18s ease, border-color .18s ease;
 }
-.credential-item:hover { background: #F5FBFC; border-color: #9FCDD5; }
+.credential-item:hover { background: #FFFBEF; border-color: #D9BA68; }
 .credential-item::before {
     content: "";
     align-self: stretch;
     flex: 0 0 4px;
     width: 4px;
     border-radius: 2px;
-    background: #008FA8;
+    background: #C58B18;
 }
 .credential-item-body { flex: 1 1 auto; min-width: 0; }
 .credential-issuer {
@@ -861,7 +861,7 @@ a:focus-visible, button:focus-visible {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .07em;
-    color: #007F96 !important;
+    color: #94620B !important;
     margin-bottom: 7px;
 }
 .credential-item h3 {
@@ -871,7 +871,7 @@ a:focus-visible, button:focus-visible {
     color: #161616;
 }
 .credential-year { margin-top: 9px; color: #666666 !important; font-size: .94rem; line-height: 1.5; }
-.credential-item > .credential-award-icon { color: #008FA8; width: 20px; height: 20px; margin-top: 3px; }
+.credential-item > .credential-award-icon { color: #C58B18; width: 20px; height: 20px; margin-top: 3px; }
 @media (max-width: 768px) {
     .content-section.credentials-section { padding: 52px 24px 64px; }
     .credentials-section h2 { font-size: clamp(2.35rem, 7.5vw, 3.5rem); }
