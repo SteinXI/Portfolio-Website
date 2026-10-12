@@ -19,7 +19,7 @@
 html {
     scroll-behavior: smooth;
     /* Gentle page-to-page scrolling without trapping longer sections */
-    scroll-snap-type: y proximity;
+    scroll-snap-type: none;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -171,9 +171,9 @@ a:focus-visible, button:focus-visible {
 
 /* == 07. REMAINING SECTIONS & LEFT NAVIGATION SPACE == */
 .page-content {
-    scroll-snap-align: start;
+    scroll-snap-align: none;
     background-color: #FFFFFF;
-    padding: 0 0 30px var(--nav-space);
+    padding: 0 0 0 var(--nav-space);
 }
 .content-section {
     width: 100%;
@@ -936,7 +936,7 @@ a:focus-visible, button:focus-visible {
 .contact-primary .contact-method-label { color: #AFAFAF; }
 .contact-primary-address {
     color: #FFFFFF;
-    font-size: 1rem;
+    font-size: .875rem;
     font-weight: 600;
     overflow-wrap: anywhere;
 }
@@ -962,7 +962,7 @@ a:focus-visible, button:focus-visible {
     color: #FFFFFF;
     text-decoration: none;
 }
-.contact-method-value { color: #FFFFFF; font-size: 1rem; line-height: 1.5; overflow-wrap: anywhere; }
+.contact-method-value { color: #FFFFFF; font-size: .875rem; line-height: 1.5; overflow-wrap: anywhere; }
 .contact-primary:hover .contact-primary-address, .contact-primary:focus-visible .contact-primary-address,
 .contact-method:hover .contact-method-value, .contact-method:focus-visible .contact-method-value { color: var(--cyan); }
 .contact-section a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 5px; }
@@ -982,6 +982,29 @@ a:focus-visible, button:focus-visible {
 }
 @media (prefers-reduced-motion: reduce) {
     .contact-link-arrow { transition: none; }
+}
+
+
+/* Asia-Pacific Earth icon beside the Contact heading */
+.contact-title-row {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 2.5vw, 32px);
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+.contact-title-row h2 { margin-bottom: 0; }
+.contact-earth-icon {
+    display: inline-block;
+    font-size: clamp(2.4rem, 4.2vw, 4.1rem);
+    line-height: 1;
+    flex-shrink: 0;
+    vertical-align: middle;
+    filter: saturate(.85);
+}
+@media (max-width: 768px) {
+    .contact-title-row { gap: 14px; }
+    .contact-earth-icon { font-size: clamp(2rem, 8vw, 3rem); }
 }
 
 /* == 08. FLOATING NAVIGATION == */
@@ -1096,7 +1119,7 @@ a:focus-visible, button:focus-visible {
     .Intro-interests { gap: 10px 16px; }
     .Intro-interests span { font-size: 0.95rem; border-bottom-width: 2px; }
     .Intro-description { max-width: 100%; font-size: 1.05rem; line-height: 1.65; }
-    .page-content { padding: 0 0 24px; }
+    .page-content { padding: 0; }
     .content-section { padding: 25px 20px; }
     .mobile-menu-button {
         position: fixed;
