@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector(".floating-nav");
     const menuButton = document.querySelector(".mobile-menu-button");
     const intro = document.querySelector("#home");
+    const footer = document.querySelector("body > .site-footer");
     const navLinks = [...document.querySelectorAll(".floating-nav a")];
     const sections = [...document.querySelectorAll("main section[id]")];
 
@@ -18,9 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateNavigation() {
         const passedIntro = intro.getBoundingClientRect().bottom <= 0;
-        nav.classList.toggle("is-visible", passedIntro);
-        menuButton.classList.toggle("is-visible", passedIntro);
-        if (!passedIntro) setMenuOpen(false);
+        const reachedFooter = footer && footer.getBoundingClientRect().top <= window.innerHeight;
+        const showNavigation = passedIntro && !reachedFooter;
+        nav.classList.toggle("is-visible", showNavigation);
+        menuButton.classList.toggle("is-visible", showNavigation);
+        if (!showNavigation) setMenuOpen(false);
 
         let activeId = "home";
         const referenceY = window.innerHeight * 0.42;
