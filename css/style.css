@@ -73,7 +73,7 @@ a:focus-visible, button:focus-visible {
 }
 .Intro h1 {
     font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
-    font-size: clamp(4rem, 7.7vw, 7.1rem);
+    font-size: clamp(3.7rem, 7vw, 6.6rem);
     font-weight: 400;
     line-height: 0.98;
     letter-spacing: -0.025em;
@@ -418,7 +418,7 @@ a:focus-visible, button:focus-visible {
     font-size: clamp(2.8rem, 4.9vw, 4.9rem);
     margin-bottom: 21px;
 }
-.experience-title-accent { color: var(--green); }
+.experience-title-accent { color: var(--navy); }
 .experience-intro > p:last-child {
     font-size: clamp(1.05rem, 1.3vw, 1.18rem);
     line-height: 1.75;
@@ -447,7 +447,7 @@ a:focus-visible, button:focus-visible {
 .experience-detail p { color: var(--grey); font-size: 1.02rem; line-height: 1.8; }
 .experience-responsibilities { list-style: disc; padding-left: 1.25rem; margin: 4px 0 0; color: var(--grey); font-size: 1.02rem; line-height: 1.5; }
 .experience-responsibilities li + li { margin-top: 4px; }
-.experience-responsibilities li::marker { color: var(--green); }
+.experience-responsibilities li::marker { color: var(--navy); }
 .experience-additional {
     border-top: 1px solid #CCCCCC;
     padding: 22px 0 8px;
@@ -460,19 +460,19 @@ a:focus-visible, button:focus-visible {
 }
 .experience-additional strong { color: var(--black); }
 /* Unified accent for all three featured roles. */
-.experience-entry-1, .experience-entry-2, .experience-entry-3 { --experience-accent: #00865F; --experience-tint: #E9F6F0; }
-.experience-entry { border-top: 2px solid var(--experience-accent, #CCCCCC); }
-.experience-entry .experience-date { color: var(--experience-accent, var(--grey)); font-weight: 700; }
+.experience-entry-1, .experience-entry-2, .experience-entry-3 { --experience-accent: #193F84; --experience-tint: #EDF2FC; }
+.experience-entry { border-top: 2px solid var(--experience-accent, #193F84); }
+.experience-entry .experience-date { color: var(--experience-accent, var(--navy)); font-weight: 700; }
 .experience-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 16px; }
 .experience-tag {
     display: inline-flex;
     align-items: center;
     min-height: 30px;
     padding: 5px 11px;
-    border: 1px solid var(--experience-accent, #CCCCCC);
+    border: 1px solid var(--experience-accent, #193F84);
     border-radius: 4px;
-    background: var(--experience-tint, #F5F5F5);
-    color: var(--experience-accent, var(--black));
+    background: var(--experience-tint, #EDF2FC);
+    color: var(--experience-accent, var(--navy));
     font-size: .82rem;
     line-height: 1.35;
     font-weight: 600;
@@ -546,9 +546,9 @@ a:focus-visible, button:focus-visible {
     text-align: right;
 }
 .education-date {
-    color: #505050;
+    color: var(--school-accent);
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.5;
 }
 .education-marker {
@@ -584,15 +584,7 @@ a:focus-visible, button:focus-visible {
     min-width: 0;
 }
 .education-entry:last-child .education-details { padding-bottom: 0; }
-.education-details::before {
-    content: "";
-    display: block;
-    width: 48px;
-    height: 3px;
-    background: var(--school-accent);
-    border-radius: 3px;
-    margin: 6px 0 17px;
-}
+.education-details::before { content: none; display: none; }
 .education-details h3 {
     font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
     color: var(--black);
@@ -637,8 +629,8 @@ a:focus-visible, button:focus-visible {
     isolation: isolate;
     background: #111111;
     color: #FFFFFF;
-    padding-top: clamp(65px, 8vw, 112px);
-    padding-bottom: clamp(65px, 8vw, 112px);
+    padding-top: clamp(56px, 7vw, 92px);
+    padding-bottom: clamp(56px, 7vw, 92px);
     padding-right: clamp(48px, 8vw, 120px);
 }
 .languages-section::before {
@@ -676,7 +668,7 @@ a:focus-visible, button:focus-visible {
     color: #FFFFFF;
     margin-bottom: 24px;
 }
-.languages-title-accent { color: #55C0D0; }
+.languages-title-accent { color: #DFB76C; }
 .languages-introduction {
     max-width: 830px;
     color: #C9C9C9 !important;
@@ -686,7 +678,7 @@ a:focus-visible, button:focus-visible {
 .language-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    margin-top: clamp(48px, 6vw, 82px);
+    margin-top: clamp(32px, 4vw, 54px);
     border: 1px solid #3A3A3A;
 }
 .language-cell {
@@ -695,41 +687,41 @@ a:focus-visible, button:focus-visible {
     align-items: center;
     text-align: center;
     min-width: 0;
-    padding: clamp(24px, 3vw, 40px) clamp(10px, 1.7vw, 24px);
+    padding: 26px clamp(10px, 1.7vw, 22px) 22px;
     border-right: 1px solid #3A3A3A;
 }
 .language-cell:last-child { border-right: 0; }
 .language-glyph {
     font-family: "Bodoni Moda", Georgia, serif;
-    font-size: clamp(2.8rem, 4vw, 4rem);
+    font-size: clamp(2.2rem, 3vw, 3rem);
     font-weight: 400;
-    color: #55C0D0;
+    color: #DFB76C;
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 .language-cell h3 {
     font-family: "Bodoni Moda", Georgia, serif;
     font-weight: 500;
-    font-size: clamp(1.22rem, 1.7vw, 1.65rem);
+    font-size: clamp(1.05rem, 1.35vw, 1.35rem);
     line-height: 1.35;
     color: #FFFFFF;
 }
 .language-level {
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #C9C9C9 !important;
 }
 .language-stars {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 4px;
     margin-top: auto;
-    padding-top: 22px;
-    font-size: 1.15rem;
+    padding-top: 16px;
+    font-size: 1rem;
     line-height: 1;
 }
-.star-filled { color: #55C0D0; font-family: Arial, Helvetica, sans-serif; font-weight: 700; }
+.star-filled { color: #DFB76C; font-family: Arial, Helvetica, sans-serif; font-weight: 700; }
 .star-empty { color: #777777; font-family: Arial, Helvetica, sans-serif; font-weight: 400; }
 @media (max-width: 1000px) {
     .language-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -739,12 +731,30 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 768px) {
     .content-section.languages-section { padding: 52px 24px 64px; }
     .languages-section h2 { font-size: clamp(2.8rem, 9vw, 4.2rem); }
-    .language-grid { margin-top: 42px; }
+    .language-grid { margin-top: 32px; }
 }
 @media (max-width: 460px) {
     .language-grid { grid-template-columns: 1fr; }
     .language-cell { border-right: 0; border-bottom: 1px solid #3A3A3A; }
     .language-cell:last-child { border-bottom: 0; }
+}
+
+/* == CONSISTENT, RESTRAINED SECTION HEADINGS == */
+.about-section h2,
+.focus-section h2,
+.experience-section h2,
+.education-section h2,
+.languages-section h2 {
+    font-size: clamp(2.5rem, 4.3vw, 4.3rem);
+}
+@media (max-width: 768px) {
+    .about-section h2,
+    .focus-section h2,
+    .experience-section h2,
+    .education-section h2,
+    .languages-section h2 {
+        font-size: clamp(2.35rem, 7.5vw, 3.5rem);
+    }
 }
 
 /* == 08. FLOATING NAVIGATION == */
@@ -819,7 +829,7 @@ a:focus-visible, button:focus-visible {
         justify-content: center;
         gap: clamp(16px, 3vh, 30px);
     }
-    .Intro h1 { font-size: clamp(3.1rem, 10vw, 5.1rem); }
+    .Intro h1 { font-size: clamp(2.9rem, 9.2vw, 4.7rem); }
     .Intro-interests { gap: 10px 16px; }
     .Intro-interests span { font-size: 0.95rem; border-bottom-width: 2px; }
     .Intro-description { max-width: 100%; font-size: 1.05rem; line-height: 1.65; }
@@ -886,7 +896,7 @@ a:focus-visible, button:focus-visible {
 .experience-detail-page { max-width: 1180px; margin: 0 auto; padding: clamp(32px, 6vw, 80px) clamp(24px, 6vw, 84px); }
 .experience-back { display: inline-block; color: var(--navy); font-weight: 700; border-bottom: 1px solid currentColor; margin-bottom: 42px; }
 .experience-back:hover { color: var(--red); }
-.experience-page-header h1 { font-family: "Bodoni Moda", Georgia, serif; font-weight: 400; font-size: clamp(2.8rem, 5vw, 5rem); line-height: 1.15; margin-bottom: 22px; }
+.experience-page-header h1 { font-family: "Bodoni Moda", Georgia, serif; font-weight: 400; font-size: clamp(2.5rem, 4.3vw, 4.3rem); line-height: 1.15; margin-bottom: 22px; }
 .experience-page-header > p:last-child { color: var(--grey); font-size: 1.12rem; line-height: 1.8; max-width: 760px; }
 .experience-detail-page .experience-list { margin-bottom: 38px; }
 .experience-detail-footer { padding-left: clamp(24px, 6vw, 84px); }
