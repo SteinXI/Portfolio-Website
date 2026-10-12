@@ -330,7 +330,7 @@ a:focus-visible, button:focus-visible {
     color: #FFFFFF;
     margin-bottom: 24px;
 }
-.focus-title-accent { color: #DFB76C; }
+.focus-title-accent { color: var(--gold); }
 .focus-introduction {
     max-width: 830px !important;
     color: #C9C9C9 !important;
@@ -349,11 +349,11 @@ a:focus-visible, button:focus-visible {
     border-top: 2px solid var(--focus-accent);
     padding-top: 18px;
 }
-.focus-item-1 { --focus-accent: #E36B7B; }
-.focus-item-2 { --focus-accent: #7F9FDE; }
-.focus-item-3 { --focus-accent: #55C0D0; }
-.focus-item-4 { --focus-accent: #67C7A2; }
-.focus-item-5 { --focus-accent: #DFB76C; }
+.focus-item-1 { --focus-accent: var(--red); }
+.focus-item-2 { --focus-accent: var(--navy); }
+.focus-item-3 { --focus-accent: var(--cyan); }
+.focus-item-4 { --focus-accent: var(--green); }
+.focus-item-5 { --focus-accent: var(--gold); }
 .focus-item-6 { --focus-accent: #B9B9B9; }
 .focus-number {
     display: block;
@@ -669,7 +669,7 @@ a:focus-visible, button:focus-visible {
     color: #FFFFFF;
     margin-bottom: 24px;
 }
-.languages-title-accent { color: #DFB76C; }
+.languages-title-accent { color: var(--gold); }
 .languages-introduction {
     max-width: 830px;
     color: #C9C9C9 !important;
@@ -696,7 +696,7 @@ a:focus-visible, button:focus-visible {
     font-family: "Bodoni Moda", Georgia, serif;
     font-size: clamp(2.2rem, 3vw, 3rem);
     font-weight: 400;
-    color: #DFB76C;
+    color: var(--gold);
     line-height: 1.2;
     margin-bottom: 12px;
 }
@@ -722,7 +722,7 @@ a:focus-visible, button:focus-visible {
     font-size: 1rem;
     line-height: 1;
 }
-.star-filled { color: #DFB76C; font-family: Arial, Helvetica, sans-serif; font-weight: 700; }
+.star-filled { color: var(--gold); font-family: Arial, Helvetica, sans-serif; font-weight: 700; }
 .star-empty { color: #777777; font-family: Arial, Helvetica, sans-serif; font-weight: 400; }
 @media (max-width: 1000px) {
     .language-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -796,7 +796,7 @@ a:focus-visible, button:focus-visible {
     letter-spacing: -.025em;
     margin: 0;
 }
-.credentials-title-accent { color: #94620B; }
+.credentials-title-accent { color: var(--gold); }
 .credentials-heading-icon {
     display: flex;
     align-items: center;
@@ -805,7 +805,7 @@ a:focus-visible, button:focus-visible {
     width: 54px;
     height: 54px;
     border-radius: 8px;
-    color: #C58B18;
+    color: var(--gold);
     background: #FFF5D9;
 }
 .credential-award-icon { width: 24px; height: 24px; flex: 0 0 24px; }
@@ -827,9 +827,9 @@ a:focus-visible, button:focus-visible {
     transition: background .18s ease, border-color .18s ease, color .18s ease;
 }
 .credentials-tab[aria-selected="true"] {
-    background: #C58B18;
+    background: var(--gold);
     color: #111111;
-    border-color: #C58B18;
+    border-color: var(--gold);
 }
 .credentials-tab:hover:not([aria-selected="true"]) { background: #FFF9E9; }
 .credentials-tab:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
@@ -852,7 +852,7 @@ a:focus-visible, button:focus-visible {
     flex: 0 0 4px;
     width: 4px;
     border-radius: 2px;
-    background: #C58B18;
+    background: var(--gold);
 }
 .credential-item-body { flex: 1 1 auto; min-width: 0; }
 .credential-issuer {
@@ -871,7 +871,7 @@ a:focus-visible, button:focus-visible {
     color: #161616;
 }
 .credential-year { margin-top: 9px; color: #666666 !important; font-size: .94rem; line-height: 1.5; }
-.credential-item > .credential-award-icon { color: #C58B18; width: 20px; height: 20px; margin-top: 3px; }
+.credential-item > .credential-award-icon { color: var(--gold); width: 20px; height: 20px; margin-top: 3px; }
 @media (max-width: 768px) {
     .content-section.credentials-section { padding: 52px 24px 64px; }
     .credentials-section h2 { font-size: clamp(2.35rem, 7.5vw, 3.5rem); }
