@@ -387,6 +387,92 @@ a:focus-visible, button:focus-visible {
     .focus-section h2 { font-size: clamp(2.8rem, 9vw, 4.2rem); }
 }
 
+/* == EXPERIENCE: EDITORIAL CAREER SUMMARY == */
+.experience-section {
+    position: relative;
+    padding-top: clamp(58px, 7vw, 100px);
+    padding-bottom: clamp(64px, 7vw, 105px);
+    padding-right: clamp(48px, 8vw, 120px);
+}
+.experience-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(-1 * var(--nav-space));
+    right: 0;
+    height: 2px;
+    background: var(--black);
+}
+.experience-label {
+    color: var(--red) !important;
+    font-size: 0.9rem;
+    letter-spacing: .12em;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.experience-section h2 {
+    font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: -.025em;
+    font-size: clamp(2.8rem, 4.9vw, 4.9rem);
+    margin-bottom: 21px;
+}
+.experience-title-accent { color: var(--green); }
+.experience-intro > p:last-child {
+    font-size: clamp(1.05rem, 1.3vw, 1.18rem);
+    line-height: 1.75;
+    color: var(--grey);
+    max-width: 720px;
+}
+.experience-list { margin-top: clamp(40px, 5vw, 70px); }
+.experience-entry {
+    border-top: 1px solid #CCCCCC;
+    display: grid;
+    grid-template-columns: minmax(190px, .9fr) minmax(0, 1.5fr);
+    gap: clamp(22px, 5vw, 80px);
+    padding: 26px 0 31px;
+}
+.experience-date {
+    display: block;
+    font-size: .85rem;
+    letter-spacing: .045em;
+    color: #696969;
+    margin-bottom: 7px;
+}
+.experience-meta h3 { font-size: 1.07rem; line-height: 1.4; font-weight: 700; }
+.experience-location { color: #777777; font-size: .95rem; }
+.experience-detail h4 { font-size: clamp(1.18rem, 1.55vw, 1.45rem); line-height: 1.4; margin-bottom: 11px; }
+.experience-note { font-size: .85em; font-weight: 400; color: var(--grey); }
+.experience-detail p { color: var(--grey); font-size: 1.02rem; line-height: 1.8; }
+.experience-additional {
+    border-top: 1px solid #CCCCCC;
+    padding: 22px 0 8px;
+}
+.experience-additional p {
+    color: var(--grey);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 10px;
+}
+.experience-additional strong { color: var(--black); }
+.experience-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 25px;
+    padding: 12px 0 6px;
+    border-bottom: 2px solid var(--navy);
+    font-weight: 700;
+    color: var(--navy);
+}
+.experience-more:hover { color: var(--red); border-bottom-color: var(--red); }
+@media (max-width: 768px) {
+    .content-section.experience-section { padding: 52px 24px 64px; }
+    .experience-entry { grid-template-columns: 1fr; gap: 15px; padding: 23px 0; }
+    .experience-section h2 { font-size: clamp(2.7rem, 9vw, 4rem); }
+}
+
 /* == 08. FLOATING NAVIGATION == */
 .floating-nav {
     position: fixed;
@@ -521,3 +607,12 @@ a:focus-visible, button:focus-visible {
     html { scroll-behavior: auto; scroll-snap-type: none; }
     .floating-nav { transition: none; }
 }
+
+/* == STANDALONE EXPERIENCE PAGE == */
+.experience-detail-page { max-width: 1180px; margin: 0 auto; padding: clamp(32px, 6vw, 80px) clamp(24px, 6vw, 84px); }
+.experience-back { display: inline-block; color: var(--navy); font-weight: 700; border-bottom: 1px solid currentColor; margin-bottom: 42px; }
+.experience-back:hover { color: var(--red); }
+.experience-page-header h1 { font-family: "Bodoni Moda", Georgia, serif; font-weight: 400; font-size: clamp(2.8rem, 5vw, 5rem); line-height: 1.15; margin-bottom: 22px; }
+.experience-page-header > p:last-child { color: var(--grey); font-size: 1.12rem; line-height: 1.8; max-width: 760px; }
+.experience-detail-page .experience-list { margin-bottom: 38px; }
+.experience-detail-footer { padding-left: clamp(24px, 6vw, 84px); }
