@@ -196,6 +196,59 @@ a:focus-visible, button:focus-visible {
     color: var(--white);
     border: 1px solid #404040;
 }
+/* == ABOUT ME: EDITORIAL TWO-COLUMN LAYOUT == */
+.about-section {
+    padding-block: clamp(56px, 8vw, 112px);
+}
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.4fr);
+    gap: clamp(30px, 6vw, 100px);
+    align-items: start;
+}
+.about-label {
+    color: var(--red) !important;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 22px;
+}
+.about-section h2 {
+    font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
+    font-size: clamp(2.8rem, 4.3vw, 4.6rem);
+    font-weight: 400;
+    line-height: 1.13;
+    letter-spacing: -0.025em;
+    margin: 0;
+    max-width: 13ch;
+}
+.about-biography {
+    max-width: 690px;
+}
+.about-biography p {
+    font-size: clamp(1.05rem, 1.25vw, 1.18rem);
+    font-weight: 400;
+    line-height: 1.85;
+    color: var(--grey);
+    max-width: none;
+}
+.about-biography p + p {
+    margin-top: 1.4em;
+}
+@media (max-width: 900px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .about-section h2 { max-width: 18ch; }
+}
+@media (max-width: 768px) {
+    .about-section { padding-block: 48px; }
+    .about-label { margin-bottom: 16px; }
+    .about-section h2 { font-size: clamp(2.7rem, 9vw, 4rem); }
+    .about-biography p { font-size: 1.05rem; line-height: 1.75; }
+}
+
 /* == 08. FLOATING NAVIGATION == */
 .floating-nav {
     position: fixed;
