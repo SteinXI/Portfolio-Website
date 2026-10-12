@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261012-29">
+    <link rel="stylesheet" href="css/style.css?v=20261012-30">
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -291,9 +291,107 @@
                 </div>
             </section>
 
-            <section id="credentials" class="content-section">
-                <h2>Credentials &amp; Achievements</h2>
-                <p>Selected certifications, programmes and achievements.</p>
+            <section id="credentials" class="content-section credentials-section" aria-labelledby="credentials-heading">
+                <header class="credentials-heading">
+                    <p class="credentials-label">CREDENTIALS</p>
+                    <div class="credentials-heading-row">
+                        <h2 id="credentials-heading">Credentials &amp; <span class="credentials-title-accent">Recognition</span></h2>
+                        <span class="credentials-heading-icon" aria-hidden="true"><svg class="credential-award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.2 12.5-1.7 8 5.5-3 5.5 3-1.7-8"/></svg></span>
+                    </div>
+                </header>
+                <div class="credentials-tabs" role="tablist" aria-label="Credential categories">
+                    <button type="button" id="credentials-tab-certifications" class="credentials-tab" aria-selected="true" role="tab" aria-controls="credentials-panel-certifications">Certifications</button>
+                    <button type="button" id="credentials-tab-awards" class="credentials-tab" tabindex="-1" role="tab" aria-controls="credentials-panel-awards" aria-selected="false">Awards</button>
+                    <button type="button" id="credentials-tab-participation" class="credentials-tab" tabindex="-1" role="tab" aria-controls="credentials-panel-participation" aria-selected="false">Participation</button>
+                </div>
+                <div class="credentials-panels">
+                    <div id="credentials-panel-certifications" class="credentials-panel" role="tabpanel" aria-labelledby="credentials-tab-certifications">
+                        <article class="credential-item">
+                            <div class="credential-item-body">
+                                <p class="credential-issuer">National Graduate Institute for Policy Studies (GRIPS) &amp; JICA</p>
+                                <h3>Understanding the Japanese Development Experience</h3>
+                                <p class="credential-year">SEP 2025</p>
+                            </div>
+                            <svg class="credential-award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.2 12.5-1.7 8 5.5-3 5.5 3-1.7-8"/></svg>
+                        </article>
+                        <article class="credential-item">
+                            <div class="credential-item-body">
+                                <p class="credential-issuer">British Council</p>
+                                <h3>UK agent and counsellor training</h3>
+                                <p class="credential-year">APR 2023</p>
+                            </div>
+                            <svg class="credential-award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.2 12.5-1.7 8 5.5-3 5.5 3-1.7-8"/></svg>
+                        </article>
+                        <article class="credential-item">
+                            <div class="credential-item-body">
+                                <p class="credential-issuer">The Institute of Commercial Management (ICM)</p>
+                                <h3>ICM Single Subject Diploma in Strategic Management</h3>
+                                <p class="credential-year">OCT 2022</p>
+                            </div>
+                            <svg class="credential-award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.2 12.5-1.7 8 5.5-3 5.5 3-1.7-8"/></svg>
+                        </article>
+                        <article class="credential-item">
+                            <div class="credential-item-body">
+                                <p class="credential-issuer">The Institute of Commercial Management (ICM)</p>
+                                <h3>ICM Single Subject Diploma in Leadership Studies</h3>
+                                <p class="credential-year">OCT 2022</p>
+                            </div>
+                            <svg class="credential-award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.2 12.5-1.7 8 5.5-3 5.5 3-1.7-8"/></svg>
+                        </article>
+                        <article class="credential-item">
+                            <div class="credential-item-body">
+                                <p class="credential-issuer">Harvard University (edX)</p>
+                                <h3>CS50&#39;s Computer Science for Business Professionals</h3>
+                                <p class="credential-year">JAN 2022</p>
+                            </div>
+                            <svg class="credential-award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.2 12.5-1.7 8 5.5-3 5.5 3-1.7-8"/></svg>
+                        </article>
+                        <article class="credential-item">
+                            <div class="credential-item-body">
+                                <p class="credential-issuer">University of Nottingham, Malaysia</p>
+                                <h3>Contemporary Business Management Training</h3>
+                                <p class="credential-year">NOV 2019</p>
+                            </div>
+                            <svg class="credential-award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.2 12.5-1.7 8 5.5-3 5.5 3-1.7-8"/></svg>
+                        </article>
+                        <article class="credential-item">
+                            <div class="credential-item-body">
+                                <p class="credential-issuer">Strategy First University, Myanmar</p>
+                                <h3>Certificate in Entrepreneurship Workshop</h3>
+                                <p class="credential-year">SEP 2017</p>
+                            </div>
+                            <svg class="credential-award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.2 12.5-1.7 8 5.5-3 5.5 3-1.7-8"/></svg>
+                        </article>
+                    </div>
+                    <div id="credentials-panel-awards" class="credentials-panel" role="tabpanel" aria-labelledby="credentials-tab-awards" hidden>
+                        <article class="credential-item">
+                            <div class="credential-item-body">
+                                <p class="credential-issuer">STEPS</p>
+                                <h3>Social Enterprise Idea Business Plan Competition — Second Runner-up</h3>
+                                <p class="credential-year">2016</p>
+                            </div>
+                            <svg class="credential-award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.2 12.5-1.7 8 5.5-3 5.5 3-1.7-8"/></svg>
+                        </article>
+                    </div>
+                    <div id="credentials-panel-participation" class="credentials-panel" role="tabpanel" aria-labelledby="credentials-tab-participation" hidden>
+                        <article class="credential-item">
+                            <div class="credential-item-body">
+                                <p class="credential-issuer">Asia Next Dialogue &amp; Asia Next Forum</p>
+                                <h3>Participant</h3>
+                                <p class="credential-year">AUG 2026</p>
+                            </div>
+                            <svg class="credential-award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.2 12.5-1.7 8 5.5-3 5.5 3-1.7-8"/></svg>
+                        </article>
+                        <article class="credential-item">
+                            <div class="credential-item-body">
+                                <p class="credential-issuer">Kitakyushu SDGs Training</p>
+                                <h3>Participant</h3>
+                                <p class="credential-year">AUG 2026</p>
+                            </div>
+                            <svg class="credential-award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.2 12.5-1.7 8 5.5-3 5.5 3-1.7-8"/></svg>
+                        </article>
+                    </div>
+                </div>
             </section>
 
             <section id="contact" class="content-section dark-section">
